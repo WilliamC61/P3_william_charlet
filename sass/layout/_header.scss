@@ -8,5 +8,16 @@
     justify-content: space-around;
     &_logo {
         width: 43.6%;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    &_back-to-main {
+        color: $color-black;
+        line-height: 6.4rem;
+        position: absolute;
+        vertical-align: middle;
+        left: 1.8rem;
     }
 }

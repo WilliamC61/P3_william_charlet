@@ -81,9 +81,9 @@ button {
 
 .primary-button {
   height: 5rem;
-  margin-top: 3.2rem;
+  min-width: 18.6rem;
   padding: 0 2.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
   font-style: normal;
   border-radius: 2.5rem;
@@ -91,6 +91,8 @@ button {
   border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #dddddd;
+          box-shadow: 0.5rem 0.5rem 0.5rem #dddddd;
 }
 
 .header {
@@ -112,6 +114,51 @@ button {
 
 .header_logo {
   width: 43.6%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.header_back-to-main {
+  color: #000;
+  line-height: 6.4rem;
+  position: absolute;
+  vertical-align: middle;
+  left: 1.8rem;
+}
+
+.footer {
+  background-color: #000;
+  color: #FFFFFF;
+}
+
+.footer_title {
+  margin-left: 2.4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-family: Shrikhand;
+  font-size: 1.8rem;
+}
+
+.footer_list {
+  padding-bottom: 3.3rem;
+}
+
+.footer_list_item {
+  margin-left: 2.4rem;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  line-height: 2.6rem;
+  display: block;
+}
+
+.footer_list_item_icon {
+  font-size: 1.3rem;
+  width: 2.2rem;
+  text-align: center;
+  display: block;
 }
 
 /* 
@@ -155,23 +202,10 @@ button {
 
 .introduction_subtitle {
   margin-top: 1.5rem;
+  margin-bottom: 3.2rem;
   font-size: 1.8rem;
   font-weight: lighter;
   line-height: 1.1;
-}
-
-.introduction_explore {
-  height: 5rem;
-  margin-top: 3.2rem;
-  padding: 0 2.5rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  font-style: normal;
-  border-radius: 2.5rem;
-  color: #FFFFFF;
-  border: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
 }
 
 .operation {
@@ -200,6 +234,7 @@ button {
 }
 
 .operation_step--grey {
+  background-color: #F6F6F6;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #dddddd;
           box-shadow: 0.5rem 0.5rem 0.5rem #dddddd;
   -webkit-transition: background-color, -webkit-box-shadow 500ms;
@@ -287,7 +322,7 @@ button {
 .restaurants_list_card_legend {
   margin-left: 1.2rem;
   margin-top: 1.4rem;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #000;
   padding-bottom: 1rem;
 }
@@ -371,40 +406,166 @@ button {
   opacity: 0;
 }
 
-/*
-@import "./pages/about";
-@import "./pages/project";
-*/
-.footer {
-  background-color: #000;
-  color: #FFFFFF;
+.banner {
+  width: 100%;
+  position: relative;
 }
 
-.footer_title {
-  margin-left: 2.4rem;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+.banner_img {
+  width: 100%;
+  height: 26rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.banner_button {
+  width: 100%;
+  height: 10rem;
+  border-radius: 4rem;
+  background-color: #F6F6F6;
+  padding-left: 1.8rem;
+  position: absolute;
+  bottom: -5rem;
+}
+
+.banner_button_title {
+  padding-top: 3.6rem;
   font-family: Shrikhand;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
+  position: relative;
+  display: inline-block;
 }
 
-.footer_list {
-  padding-bottom: 3.3rem;
+.banner_button_is-favorite {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 300;
+  position: absolute;
+  top: 3.6rem;
+  right: 2rem;
 }
 
-.footer_list_item {
-  margin-left: 2.4rem;
+.banner_button_is-favorite--no {
+  position: relative;
+  left: 0;
+  opacity: 1;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.banner_button_is-favorite--yes {
+  position: absolute;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+#heart:checked + label > .banner_button_is-favorite--yes {
+  opacity: 1;
+}
+
+#heart:checked + label > .banner_button_is-favorite--no {
+  opacity: 0;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  padding-top: 5rem;
+}
+
+.menu_chapter {
+  padding-bottom: 1.8rem;
+}
+
+.menu_chapter_title {
+  padding-left: 2rem;
+  padding-top: 0.3rem;
   font-size: 1.6rem;
-  color: #FFFFFF;
-  text-decoration: none;
-  line-height: 2.6rem;
-  display: block;
+  font-weight: lighter;
 }
 
-.footer_list_item_icon {
-  font-size: 1.3rem;
-  width: 2.2rem;
+.menu_chapter_underline {
+  margin-top: 0.6rem;
+  margin-left: 2rem;
+  width: 4rem;
+  height: 0.3rem;
+  background-color: #99E2D0;
+}
+
+.courses_card {
+  height: 6.8rem;
+  background-color: #FFFFFF;
+  margin: 1.4rem;
+  border-radius: 1.2rem;
+  color: #000;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.courses_card_desc {
+  padding-left: 1rem;
+  width: 64%;
+}
+
+.courses_card_desc_title {
+  padding-top: 1.2rem;
+  font-size: 1.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.courses_card_desc_subtitle {
+  font-size: 1.4rem;
+  padding-bottom: .6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.courses_card_price {
+  width: 16%;
+  height: 6.8rem;
+  padding-top: 4rem;
   text-align: center;
-  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.courses_card_check-mark {
+  width: 20%;
+  height: 6.8rem;
+  line-height: 6.8rem;
+  background-color: #99E2D0;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+
+.launch-command {
+  padding-top: 1.6rem;
+  padding-bottom: 5.7rem;
+  background-color: #F6F6F6;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
