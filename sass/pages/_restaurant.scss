@@ -176,9 +176,9 @@
     }
 }
 .courses_card:hover .courses_card_desc {
-    animation: desc-shrink 10s linear 0s 1  both;
+    animation: desc-shrink 0.5s linear 0s 1  both;
 }
 
 .courses_card:hover .courses_card_check-mark_icone {
-        animation: icon-rotate 10s linear 0s 1  both;
+        animation: icon-rotate 0.5s linear 0s 1  both;
     }

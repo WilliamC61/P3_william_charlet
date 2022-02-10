@@ -102,6 +102,7 @@ button {
 
 .primary-button:hover {
   opacity: 80%;
+  cursor: pointer;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
           box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
 }
@@ -384,6 +385,10 @@ button {
   transition: opacity 500ms;
 }
 
+.fa-heart:hover {
+  cursor: pointer;
+}
+
 .hidden-checkbox {
   display: none;
 }
@@ -418,6 +423,141 @@ button {
 
 #heart4:checked + label > .restaurants_list_card_is-favorite--no {
   opacity: 0;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin-and-scale {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(0.1);
+            transform: rotate(360deg) scale(0.1);
+  }
+}
+
+@keyframes spin-and-scale {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(0.1);
+            transform: rotate(360deg) scale(0.1);
+  }
+}
+
+@-webkit-keyframes loading-spinner-opacity {
+  0% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loading-spinner-opacity {
+  0% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading-spinner {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: loading-spinner-opacity 3s linear both;
+          animation: loading-spinner-opacity 3s linear both;
+}
+
+.loading-spinner_circle {
+  width: 250px;
+  height: 250px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  border-radius: 250px;
+  border: 5px solid transparent;
+  border-top-color: #9356DC;
+  -webkit-animation: spin-and-scale 3s linear both;
+          animation: spin-and-scale 3s linear both;
+}
+
+.loading-spinner_circle:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 240px;
+  border: 5px solid transparent;
+  border-top: 5px solid #FF79DA;
+  -webkit-animation: spin 1.5s linear 2;
+          animation: spin 1.5s linear 2;
+}
+
+.loading-spinner_circle:before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  bottom: 25px;
+  right: 25px;
+  border-radius: 225px;
+  border: 5px solid transparent;
+  border-top: 5px solid #99E2D0;
+  -webkit-animation: spin 1s linear 3;
+          animation: spin 1s linear 3;
 }
 
 .banner {
@@ -981,12 +1121,12 @@ button {
 }
 
 .courses_card:hover .courses_card_desc {
-  -webkit-animation: desc-shrink 10s linear 0s 1  both;
-          animation: desc-shrink 10s linear 0s 1  both;
+  -webkit-animation: desc-shrink 0.5s linear 0s 1  both;
+          animation: desc-shrink 0.5s linear 0s 1  both;
 }
 
 .courses_card:hover .courses_card_check-mark_icone {
-  -webkit-animation: icon-rotate 10s linear 0s 1  both;
-          animation: icon-rotate 10s linear 0s 1  both;
+  -webkit-animation: icon-rotate 0.5s linear 0s 1  both;
+          animation: icon-rotate 0.5s linear 0s 1  both;
 }
 /*# sourceMappingURL=style.css.map */
