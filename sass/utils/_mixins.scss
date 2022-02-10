@@ -1,4 +1,11 @@
 
+@mixin box-shadow {
+    box-shadow: 0.5rem 0.5rem 0.5rem darken($color-very-light-grey, 10%);
+}
+@mixin box-shadow-dark {
+    box-shadow: 0.5rem 0.5rem 0.5rem darken($color-very-light-grey, 30%);
+}
+
 @mixin primary-button {
     height: 5rem;
     min-width: 18.6rem;
@@ -9,6 +16,12 @@
     border-radius: 2.5rem;
     color: $color-white;
     border: none;
-    background: linear-gradient($color-secondary, $color-primary);
-    box-shadow: 0.5rem 0.5rem 0.5rem darken($color-very-light-grey, 10%);
+    background: $pink-gradient;
+     @include box-shadow();
+    opacity: 1;
+    transition: opacity, box-shadow 500ms;
+    &:hover{
+        opacity: 80%;
+        @include box-shadow-dark();
+    }
 }    

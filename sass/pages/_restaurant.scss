@@ -38,7 +38,7 @@
             &--yes{
                 position:absolute;
                 left: 0;
-                background: linear-gradient($color-primary, $color-secondary);
+                background: $pink-gradient;
                 background-clip: text;
                 color: transparent;
                 opacity: 0;
@@ -88,22 +88,24 @@
     flex-wrap: nowrap;
     justify-content:space-between;
     overflow: hidden;
+    @include box-shadow();
       &_desc {
-        padding-left: 1rem;
-        width:64%;
-        ;
+        width: 84%;
+        display: block;
+        flex-shrink: 0;
         &_title {
             padding-top: 1.2rem;
+            padding-left: 1rem;
             font-size: 1.8rem;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         &_subtitle {
-           font-size: 1.4rem;
+           padding-left: 1rem;
            padding-bottom: .6rem;
+           font-size: 1.4rem;
            white-space: nowrap;
-
            overflow: hidden;
            text-overflow: ellipsis;
         }
@@ -112,9 +114,11 @@
         width: 16%;
         height: 6.8rem;
         padding-top: 4rem;
-        text-align: center;
+        padding-right: 1rem;
+        text-align: right;
         font-size: 1.5rem;
         font-weight: bold;
+        flex-shrink: 0;
     }
     &_check-mark {
         width: 20%;
@@ -124,7 +128,7 @@
         color: $color-white;
         text-align: center;
         vertical-align: middle;
-        transition: width 1s;
+        flex-shrink: 0;
     }
 }
 
@@ -134,3 +138,47 @@
     background-color: $color-very-light-grey;
     text-align: center;
 }
+
+@for $i from 1 through 12 { 
+    @keyframes menu_anim#{$i} {
+        0% { 
+            opacity: 0;
+            transform: translateY(2rem*$i);
+        }
+        100% {
+            opacity: 1;
+            tranform:translateY(0)
+        }
+    }
+}
+
+@for $i from 1 through 12 { 
+    #menu-item-#{$i} {
+        animation: menu_anim#{$i} 200ms linear 200ms* $i 1 both;
+    }
+}
+
+@keyframes desc-shrink {
+    0% {
+        width:84%
+    }
+    100% {
+        width:64%
+    }
+}
+
+@keyframes icon-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.courses_card:hover .courses_card_desc {
+    animation: desc-shrink 10s linear 0s 1  both;
+}
+
+.courses_card:hover .courses_card_check-mark_icone {
+        animation: icon-rotate 10s linear 0s 1  both;
+    }
