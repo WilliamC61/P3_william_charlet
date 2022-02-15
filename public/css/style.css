@@ -790,7 +790,8 @@ button {
             transform: translateY(2rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -805,7 +806,8 @@ button {
             transform: translateY(2rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -820,7 +822,8 @@ button {
             transform: translateY(4rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -835,7 +838,8 @@ button {
             transform: translateY(4rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -850,7 +854,8 @@ button {
             transform: translateY(6rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -865,7 +870,8 @@ button {
             transform: translateY(6rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -880,7 +886,8 @@ button {
             transform: translateY(8rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -895,7 +902,8 @@ button {
             transform: translateY(8rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -910,7 +918,8 @@ button {
             transform: translateY(10rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -925,7 +934,8 @@ button {
             transform: translateY(10rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -940,7 +950,8 @@ button {
             transform: translateY(12rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -955,7 +966,8 @@ button {
             transform: translateY(12rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -970,7 +982,8 @@ button {
             transform: translateY(14rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -985,7 +998,8 @@ button {
             transform: translateY(14rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1000,7 +1014,8 @@ button {
             transform: translateY(16rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1015,7 +1030,8 @@ button {
             transform: translateY(16rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1030,7 +1046,8 @@ button {
             transform: translateY(18rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1045,7 +1062,8 @@ button {
             transform: translateY(18rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1060,7 +1078,8 @@ button {
             transform: translateY(20rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1075,7 +1094,8 @@ button {
             transform: translateY(20rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1090,7 +1110,8 @@ button {
             transform: translateY(22rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1105,7 +1126,8 @@ button {
             transform: translateY(22rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1120,7 +1142,8 @@ button {
             transform: translateY(24rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1135,7 +1158,8 @@ button {
             transform: translateY(24rem);
   }
   50% {
-    tranform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 0.2;
   }
   100% {
@@ -1144,63 +1168,63 @@ button {
 }
 
 #menu-item-1 {
-  -webkit-animation: menu_anim1 400ms linear 200ms 1 both;
-          animation: menu_anim1 400ms linear 200ms 1 both;
+  -webkit-animation: menu_anim1 500ms linear 250ms 1 both;
+          animation: menu_anim1 500ms linear 250ms 1 both;
 }
 
 #menu-item-2 {
-  -webkit-animation: menu_anim2 400ms linear 400ms 1 both;
-          animation: menu_anim2 400ms linear 400ms 1 both;
+  -webkit-animation: menu_anim2 500ms linear 500ms 1 both;
+          animation: menu_anim2 500ms linear 500ms 1 both;
 }
 
 #menu-item-3 {
-  -webkit-animation: menu_anim3 400ms linear 600ms 1 both;
-          animation: menu_anim3 400ms linear 600ms 1 both;
+  -webkit-animation: menu_anim3 500ms linear 750ms 1 both;
+          animation: menu_anim3 500ms linear 750ms 1 both;
 }
 
 #menu-item-4 {
-  -webkit-animation: menu_anim4 400ms linear 800ms 1 both;
-          animation: menu_anim4 400ms linear 800ms 1 both;
+  -webkit-animation: menu_anim4 500ms linear 1000ms 1 both;
+          animation: menu_anim4 500ms linear 1000ms 1 both;
 }
 
 #menu-item-5 {
-  -webkit-animation: menu_anim5 400ms linear 1000ms 1 both;
-          animation: menu_anim5 400ms linear 1000ms 1 both;
+  -webkit-animation: menu_anim5 500ms linear 1250ms 1 both;
+          animation: menu_anim5 500ms linear 1250ms 1 both;
 }
 
 #menu-item-6 {
-  -webkit-animation: menu_anim6 400ms linear 1200ms 1 both;
-          animation: menu_anim6 400ms linear 1200ms 1 both;
+  -webkit-animation: menu_anim6 500ms linear 1500ms 1 both;
+          animation: menu_anim6 500ms linear 1500ms 1 both;
 }
 
 #menu-item-7 {
-  -webkit-animation: menu_anim7 400ms linear 1400ms 1 both;
-          animation: menu_anim7 400ms linear 1400ms 1 both;
+  -webkit-animation: menu_anim7 500ms linear 1750ms 1 both;
+          animation: menu_anim7 500ms linear 1750ms 1 both;
 }
 
 #menu-item-8 {
-  -webkit-animation: menu_anim8 400ms linear 1600ms 1 both;
-          animation: menu_anim8 400ms linear 1600ms 1 both;
+  -webkit-animation: menu_anim8 500ms linear 2000ms 1 both;
+          animation: menu_anim8 500ms linear 2000ms 1 both;
 }
 
 #menu-item-9 {
-  -webkit-animation: menu_anim9 400ms linear 1800ms 1 both;
-          animation: menu_anim9 400ms linear 1800ms 1 both;
+  -webkit-animation: menu_anim9 500ms linear 2250ms 1 both;
+          animation: menu_anim9 500ms linear 2250ms 1 both;
 }
 
 #menu-item-10 {
-  -webkit-animation: menu_anim10 400ms linear 2000ms 1 both;
-          animation: menu_anim10 400ms linear 2000ms 1 both;
+  -webkit-animation: menu_anim10 500ms linear 2500ms 1 both;
+          animation: menu_anim10 500ms linear 2500ms 1 both;
 }
 
 #menu-item-11 {
-  -webkit-animation: menu_anim11 400ms linear 2200ms 1 both;
-          animation: menu_anim11 400ms linear 2200ms 1 both;
+  -webkit-animation: menu_anim11 500ms linear 2750ms 1 both;
+          animation: menu_anim11 500ms linear 2750ms 1 both;
 }
 
 #menu-item-12 {
-  -webkit-animation: menu_anim12 400ms linear 2400ms 1 both;
-          animation: menu_anim12 400ms linear 2400ms 1 both;
+  -webkit-animation: menu_anim12 500ms linear 3000ms 1 both;
+          animation: menu_anim12 500ms linear 3000ms 1 both;
 }
 
 @-webkit-keyframes desc-shrink {
