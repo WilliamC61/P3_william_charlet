@@ -89,7 +89,7 @@
     justify-content:space-between;
     overflow: hidden;
     @include box-shadow();
-      &_desc {
+    &_desc {
         width: 84%;
         display: block;
         flex-shrink: 0;
@@ -130,6 +130,9 @@
         vertical-align: middle;
         flex-shrink: 0;
     }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .launch-command {
@@ -142,19 +145,23 @@
 @for $i from 1 through 12 { 
     @keyframes menu_anim#{$i} {
         0% { 
-            opacity: 0;
+            opacity: 0.0;
             transform: translateY(2rem*$i);
+        }
+        50% {
+            tranform:translateY(0);
+            opacity: 0.2;
         }
         100% {
             opacity: 1;
-            tranform:translateY(0)
+            
         }
     }
 }
 
 @for $i from 1 through 12 { 
     #menu-item-#{$i} {
-        animation: menu_anim#{$i} 200ms linear 200ms* $i 1 both;
+        animation: menu_anim#{$i} 500ms linear 500ms* $i 1 both;
     }
 }
 

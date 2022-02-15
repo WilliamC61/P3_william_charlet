@@ -18,17 +18,17 @@
         <!-- page title -->
         <title>ohmyfood</title>
     </head>
-    <body>
+    <body class="main-page">
         <header class="header">
             <img class="header_logo" src="public/img/logo/ohmyfood.svg" alt="Logo"/>
-            <!-- <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></span></a> -->
+            <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></span></a>
         </header>
         <main class="main">
-            <section class="location">
+            <div class="location">
                 <div>
                     <i class="location_map-icon fas fa-map-marker-alt"></i><span>Paris, Belleville</span>
                 </div>
-            </section>
+            </div>
             <!-- section introduction -->
             <section class="introduction">
                 <h1 class="introduction_title">Réserver le menu qui vous convient</h1>
@@ -55,13 +55,12 @@
             <article class="restaurants">
                 <h2>Restaurants</h2>
                 <div class= "restaurants_list">
-                    <a class= "restaurants_list_card" href="restaurant1.html">
+                    <a class= "restaurants_list_card restaurants_list_card--is-new" href="restaurant1.html">
                         <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_1.jpg" alt="La palette du goût"/>
                         <div class="restaurants_list_card_legend">
                             <h3>La palette du goût</h3>
                             <p>Menilmontant</p>
                         </div>
-                        <div class="restaurants_list_card_is-new">Nouveau</div>
                         <div class="restaurants_list_card_is-favorite">
                             <input class="hidden-checkbox" type="checkbox" id="heart1"/>
                             <label for="heart1">
@@ -70,7 +69,7 @@
                             </label>
                         </div>
                     </a>
-                    <a class= "restaurants_list_card" href="restaurant2.html">
+                    <a class= "restaurants_list_card restaurants_list_card--is-new" href="restaurant2.html">
                         <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_2.jpg" alt="La palette du goût"/>
                         <div class="restaurants_list_card_legend">
                             <h3>La note enchantée</h3>
@@ -91,7 +90,6 @@
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
                         </div>
-                        <!-- <div class="restaurants_list_card_is-new">Nouveau</div> -->
                         <div class="restaurants_list_card_is-favorite">
                             <input class="hidden-checkbox" type="checkbox" id="heart3"/>
                             <label for="heart3">
@@ -106,7 +104,6 @@
                             <h3>Le délice des sens</h3>
                             <p>Follie-mericourt</p>
                         </div>
-                        <!-- <div class="restaurants_list_card_is-new">Nouveau</div> -->
                         <div class="restaurants_list_card_is-favorite">
                             <input class="hidden-checkbox" type="checkbox" id="heart4"/>
                             <label for="heart4">

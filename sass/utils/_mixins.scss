@@ -22,7 +22,9 @@
     transition: opacity, box-shadow 500ms;
     &:hover{
         opacity: 80%;
-        cursor: pointer;
         @include box-shadow-dark();
+    }
+    &--clickable:hover {
+        cursor: pointer;
     }
 }    

@@ -102,9 +102,12 @@ button {
 
 .primary-button:hover {
   opacity: 80%;
-  cursor: pointer;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
           box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
+}
+
+.primary-button--clickable:hover {
+  cursor: pointer;
 }
 
 .header {
@@ -141,6 +144,10 @@ button {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.main-page .header_back-to-main {
+  display: none;
 }
 
 .footer {
@@ -342,20 +349,6 @@ button {
   padding-bottom: 1rem;
 }
 
-.restaurants_list_card_is-new {
-  height: 2.8rem;
-  line-height: 2.8rem;
-  padding: 0 1.2rem;
-  border-radius: 0.2rem;
-  background-color: #99E2D0;
-  color: #278870;
-  font-size: 1.4rem;
-  font-weight: 500;
-  position: absolute;
-  top: 1rem;
-  right: 1.2rem;
-}
-
 .restaurants_list_card_is-favorite {
   color: #000;
   font-size: 2.5rem;
@@ -383,6 +376,21 @@ button {
   opacity: 0;
   -webkit-transition: opacity 500ms;
   transition: opacity 500ms;
+}
+
+.restaurants_list_card--is-new:after {
+  content: "Nouveau";
+  height: 2.8rem;
+  line-height: 2.8rem;
+  padding: 0 1.2rem;
+  border-radius: 0.2rem;
+  background-color: #99E2D0;
+  color: #278870;
+  font-size: 1.4rem;
+  font-weight: 500;
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
 }
 
 .fa-heart:hover {
@@ -469,6 +477,30 @@ button {
   }
 }
 
+@-webkit-keyframes scroll-disable {
+  0% {
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+
+@keyframes scroll-disable {
+  0% {
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+
 @-webkit-keyframes loading-spinner-opacity {
   0% {
     opacity: 0.9;
@@ -493,6 +525,11 @@ button {
     opacity: 0;
     visibility: hidden;
   }
+}
+
+.main-page {
+  -webkit-animation: scroll-disable 3s linear both;
+          animation: scroll-disable 3s linear both;
 }
 
 .loading-spinner {
@@ -528,8 +565,8 @@ button {
   border-radius: 250px;
   border: 5px solid transparent;
   border-top-color: #9356DC;
-  -webkit-animation: spin-and-scale 3s linear both;
-          animation: spin-and-scale 3s linear both;
+  -webkit-animation: spin-and-scale 3s linear 1 both;
+          animation: spin-and-scale 3s linear 1 both;
 }
 
 .loading-spinner_circle:after {
@@ -542,8 +579,8 @@ button {
   border-radius: 240px;
   border: 5px solid transparent;
   border-top: 5px solid #FF79DA;
-  -webkit-animation: spin 1.5s linear 2;
-          animation: spin 1.5s linear 2;
+  -webkit-animation: spin 1.5s linear 2 both;
+          animation: spin 1.5s linear 2 both;
 }
 
 .loading-spinner_circle:before {
@@ -556,8 +593,8 @@ button {
   border-radius: 225px;
   border: 5px solid transparent;
   border-top: 5px solid #99E2D0;
-  -webkit-animation: spin 1s linear 3;
-          animation: spin 1s linear 3;
+  -webkit-animation: spin 1s linear 3 both;
+          animation: spin 1s linear 3 both;
 }
 
 .banner {
@@ -725,6 +762,10 @@ button {
       flex-shrink: 0;
 }
 
+.courses_card:hover {
+  cursor: pointer;
+}
+
 .launch-command {
   padding-top: 1.6rem;
   padding-bottom: 5.7rem;
@@ -734,350 +775,422 @@ button {
 
 @-webkit-keyframes menu_anim1 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(2rem);
             transform: translateY(2rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim1 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(2rem);
             transform: translateY(2rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim2 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(4rem);
             transform: translateY(4rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim2 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(4rem);
             transform: translateY(4rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim3 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(6rem);
             transform: translateY(6rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim3 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(6rem);
             transform: translateY(6rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim4 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(8rem);
             transform: translateY(8rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim4 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(8rem);
             transform: translateY(8rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim5 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(10rem);
             transform: translateY(10rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim5 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(10rem);
             transform: translateY(10rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim6 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(12rem);
             transform: translateY(12rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim6 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(12rem);
             transform: translateY(12rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim7 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(14rem);
             transform: translateY(14rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim7 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(14rem);
             transform: translateY(14rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim8 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(16rem);
             transform: translateY(16rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim8 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(16rem);
             transform: translateY(16rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim9 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(18rem);
             transform: translateY(18rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim9 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(18rem);
             transform: translateY(18rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim10 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(20rem);
             transform: translateY(20rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim10 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(20rem);
             transform: translateY(20rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim11 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(22rem);
             transform: translateY(22rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim11 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(22rem);
             transform: translateY(22rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @-webkit-keyframes menu_anim12 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(24rem);
             transform: translateY(24rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 @keyframes menu_anim12 {
   0% {
-    opacity: 0;
+    opacity: 0.0;
     -webkit-transform: translateY(24rem);
             transform: translateY(24rem);
   }
+  50% {
+    tranform: translateY(0);
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
-    tranform: translateY(0);
   }
 }
 
 #menu-item-1 {
-  -webkit-animation: menu_anim1 200ms linear 200ms 1 both;
-          animation: menu_anim1 200ms linear 200ms 1 both;
+  -webkit-animation: menu_anim1 500ms linear 500ms 1 both;
+          animation: menu_anim1 500ms linear 500ms 1 both;
 }
 
 #menu-item-2 {
-  -webkit-animation: menu_anim2 200ms linear 400ms 1 both;
-          animation: menu_anim2 200ms linear 400ms 1 both;
+  -webkit-animation: menu_anim2 500ms linear 1000ms 1 both;
+          animation: menu_anim2 500ms linear 1000ms 1 both;
 }
 
 #menu-item-3 {
-  -webkit-animation: menu_anim3 200ms linear 600ms 1 both;
-          animation: menu_anim3 200ms linear 600ms 1 both;
+  -webkit-animation: menu_anim3 500ms linear 1500ms 1 both;
+          animation: menu_anim3 500ms linear 1500ms 1 both;
 }
 
 #menu-item-4 {
-  -webkit-animation: menu_anim4 200ms linear 800ms 1 both;
-          animation: menu_anim4 200ms linear 800ms 1 both;
+  -webkit-animation: menu_anim4 500ms linear 2000ms 1 both;
+          animation: menu_anim4 500ms linear 2000ms 1 both;
 }
 
 #menu-item-5 {
-  -webkit-animation: menu_anim5 200ms linear 1000ms 1 both;
-          animation: menu_anim5 200ms linear 1000ms 1 both;
+  -webkit-animation: menu_anim5 500ms linear 2500ms 1 both;
+          animation: menu_anim5 500ms linear 2500ms 1 both;
 }
 
 #menu-item-6 {
-  -webkit-animation: menu_anim6 200ms linear 1200ms 1 both;
-          animation: menu_anim6 200ms linear 1200ms 1 both;
+  -webkit-animation: menu_anim6 500ms linear 3000ms 1 both;
+          animation: menu_anim6 500ms linear 3000ms 1 both;
 }
 
 #menu-item-7 {
-  -webkit-animation: menu_anim7 200ms linear 1400ms 1 both;
-          animation: menu_anim7 200ms linear 1400ms 1 both;
+  -webkit-animation: menu_anim7 500ms linear 3500ms 1 both;
+          animation: menu_anim7 500ms linear 3500ms 1 both;
 }
 
 #menu-item-8 {
-  -webkit-animation: menu_anim8 200ms linear 1600ms 1 both;
-          animation: menu_anim8 200ms linear 1600ms 1 both;
+  -webkit-animation: menu_anim8 500ms linear 4000ms 1 both;
+          animation: menu_anim8 500ms linear 4000ms 1 both;
 }
 
 #menu-item-9 {
-  -webkit-animation: menu_anim9 200ms linear 1800ms 1 both;
-          animation: menu_anim9 200ms linear 1800ms 1 both;
+  -webkit-animation: menu_anim9 500ms linear 4500ms 1 both;
+          animation: menu_anim9 500ms linear 4500ms 1 both;
 }
 
 #menu-item-10 {
-  -webkit-animation: menu_anim10 200ms linear 2000ms 1 both;
-          animation: menu_anim10 200ms linear 2000ms 1 both;
+  -webkit-animation: menu_anim10 500ms linear 5000ms 1 both;
+          animation: menu_anim10 500ms linear 5000ms 1 both;
 }
 
 #menu-item-11 {
-  -webkit-animation: menu_anim11 200ms linear 2200ms 1 both;
-          animation: menu_anim11 200ms linear 2200ms 1 both;
+  -webkit-animation: menu_anim11 500ms linear 5500ms 1 both;
+          animation: menu_anim11 500ms linear 5500ms 1 both;
 }
 
 #menu-item-12 {
-  -webkit-animation: menu_anim12 200ms linear 2400ms 1 both;
-          animation: menu_anim12 200ms linear 2400ms 1 both;
+  -webkit-animation: menu_anim12 500ms linear 6000ms 1 both;
+          animation: menu_anim12 500ms linear 6000ms 1 both;
 }
 
 @-webkit-keyframes desc-shrink {
