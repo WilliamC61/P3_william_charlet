@@ -1,57 +1,39 @@
 .banner {
     width: 100%;
     position:relative;
-      &_img {
+    &_img {
         width: 100%;
         height: 26rem;
         object-fit: cover;
         display:block;
     }
-    &_button {
+    &_info {
         width: 100%;
         height: 10rem;
         border-radius: 4rem;
         background-color: $color-very-light-grey;
-        padding-left: 1.8rem;
         position:absolute;
         bottom: -5rem;
         &_title {
             padding-top: 3.6rem;
+            padding-left: 1.8rem;
             font-family: Shrikhand;
             font-size: 2.8rem;
             position: relative;
             display: inline-block;
         }
-        &_is-favorite {
-            color: $color-black;
-            font-size: 2.5rem;
-            font-weight: 300;
-            position: absolute;
-            top: 3.6rem;
-            right: 2rem; 
-            &--no {
-                position:relative;
-                left: 0;
-                opacity: 1;
-                transition: opacity 500ms;
-            }
-            &--yes{
-                position:absolute;
-                left: 0;
-                background: $pink-gradient;
-                background-clip: text;
-                color: transparent;
-                opacity: 0;
-                transition: opacity 500ms;
-            }
-        }
+    }
+    &_is-favorite {
+        bottom: 4rem;
+        right: 2.5rem; 
+        @include is-favorite();
     }
 }
 
-#heart:checked + label>.banner_button_is-favorite--yes {
+#heart:checked + label>.banner_is-favorite--yes {
     opacity: 1;
 }
-#heart:checked + label>.banner_button_is-favorite--no {
+#heart:checked + label>.banner_is-favorite--no {
     opacity: 0;
 }
 
@@ -161,7 +143,7 @@
 
 @for $i from 1 through 12 { 
     #menu-item-#{$i} {
-        animation: menu_anim#{$i} 500ms linear 500ms* $i 1 both;
+        animation: menu_anim#{$i} 400ms linear 200ms* $i 1 both;
     }
 }
 

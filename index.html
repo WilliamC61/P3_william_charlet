@@ -21,7 +21,7 @@
     <body class="main-page">
         <header class="header">
             <img class="header_logo" src="public/img/logo/ohmyfood.svg" alt="Logo"/>
-            <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></span></a>
+            <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></a>
         </header>
         <main class="main">
             <div class="location">
@@ -33,7 +33,7 @@
             <section class="introduction">
                 <h1 class="introduction_title">Réserver le menu qui vous convient</h1>
                 <p class="introduction_subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button class="primary-button" type="button">Explorer nos restaurants</button>
+                <button class="gradient-button" type="button">Explorer nos restaurants</button>
             </section>
             <!-- Operation article -->
             <article class=operation>
@@ -51,67 +51,74 @@
                     <span class="operation_step_bullet">3</span>
                 </div>
             </article>
-            <!-- Restaurant article -->
+            <!-- Restaurants article -->
             <article class="restaurants">
                 <h2>Restaurants</h2>
                 <div class= "restaurants_list">
-                    <a class= "restaurants_list_card restaurants_list_card--is-new" href="restaurant1.html">
-                        <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_1.jpg" alt="La palette du goût"/>
-                        <div class="restaurants_list_card_legend">
-                            <h3>La palette du goût</h3>
-                            <p>Menilmontant</p>
-                        </div>
-                        <div class="restaurants_list_card_is-favorite">
+                    <div class="restaurants_list_card restaurants_list_card--is-new">
+                        <a class="restaurants_list_card_link" href="restaurant1.html">
+                            <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_1.jpg" alt="La palette du goût"/>
+                            <div class="restaurants_list_card_legend">
+                                <h3>La palette du goût</h3>
+                                <p>Menilmontant</p>
+                            </div>
+                        </a>
+                        <form class="restaurants_list_card_is-favorite">
                             <input class="hidden-checkbox" type="checkbox" id="heart1"/>
                             <label for="heart1">
                                 <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
                                 <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
                             </label>
-                        </div>
-                    </a>
-                    <a class= "restaurants_list_card restaurants_list_card--is-new" href="restaurant2.html">
-                        <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_2.jpg" alt="La palette du goût"/>
-                        <div class="restaurants_list_card_legend">
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
-                        </div>
-                        <div class="restaurants_list_card_is-favorite">
+                        </form>
+                    </div>
+                    <div class="restaurants_list_card restaurants_list_card--is-new">
+                        <a class="restaurants_list_card_link" href="restaurant2.html">
+                            <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_2.jpg" alt="La palette du goût"/>
+                            <div class="restaurants_list_card_legend">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                        </a>
+                        <form class="restaurants_list_card_is-favorite">
                             <input class="hidden-checkbox" type="checkbox" id="heart2"/>
                             <label for="heart2">
                                 <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
                                 <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
                             </label>
-                        </div>
-                    </a>
-                    <a class= "restaurants_list_card" href="restaurant3.html">
-                        <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_3.jpg" alt="La palette du goût"/>
-                        <div class="restaurants_list_card_legend">
-                            <h3>À la française</h3>
-                            <p>Cité Rouge</p>
-                        </div>
-                        <div class="restaurants_list_card_is-favorite">
+                        </form>
+                    </div>
+                    <div class= "restaurants_list_card">
+                        <a class= "restaurants_list_card_link" href="restaurant3.html">
+                            <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_3.jpg" alt="La palette du goût"/>
+                            <div class="restaurants_list_card_legend">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                        </a>
+                        <form class="restaurants_list_card_is-favorite">
                             <input class="hidden-checkbox" type="checkbox" id="heart3"/>
                             <label for="heart3">
                                 <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
                                 <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
                             </label>
-                        </div>
-                    </a>
-                    <a class= "restaurants_list_card" href="restaurant4.html">
-                        <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_4.jpg" alt="La palette du goût"/>
-                        <div class="restaurants_list_card_legend">
-                            <h3>Le délice des sens</h3>
-                            <p>Follie-mericourt</p>
-                        </div>
-                        <div class="restaurants_list_card_is-favorite">
+                        </form>
+                    </div>
+                    <div class="restaurants_list_card">
+                        <a class= "restaurants_list_card_link" href="restaurant4.html">
+                            <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_4.jpg" alt="La palette du goût"/>
+                            <div class="restaurants_list_card_legend">
+                                <h3>Le délice des sens</h3>
+                                <p>Follie-mericourt</p>
+                            </div>
+                        </a>
+                        <form class="restaurants_list_card_is-favorite">
                             <input class="hidden-checkbox" type="checkbox" id="heart4"/>
                             <label for="heart4">
                                 <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
                                 <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
                             </label>
-                        </div>
-                    </a>
-                    
+                        </form>
+                    </div>
                 </div>
             </article>
         </main>
@@ -124,9 +131,9 @@
                 <a class="footer_list_item" href="mailto:contact@ohmyfood.com">Contact</a>
             </div>
         </footer>
+       <!--  <div class="loading-spinner">
+            <span class="loading-spinner_circle"></span>
+        </div> -->
     </body>
 </html>
 
-<div class="loading-spinner">
-    <span class="loading-spinner_circle"></span>
-</div>

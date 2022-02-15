@@ -79,7 +79,7 @@ button {
   font-weight: normal;
 }
 
-.primary-button {
+.gradient-button {
   height: 5rem;
   min-width: 18.6rem;
   padding: 0 2.5rem;
@@ -100,7 +100,7 @@ button {
   transition: opacity, box-shadow 500ms, -webkit-box-shadow 500ms;
 }
 
-.primary-button:hover {
+.gradient-button:hover {
   opacity: 80%;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
           box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
@@ -414,7 +414,7 @@ button {
   display: block;
 }
 
-.banner_button {
+.banner_info {
   width: 100%;
   height: 10rem;
   border-radius: 4rem;
@@ -424,7 +424,7 @@ button {
   bottom: -5rem;
 }
 
-.banner_button_title {
+.banner_info_title {
   padding-top: 3.6rem;
   font-family: Shrikhand;
   font-size: 2.8rem;
@@ -432,7 +432,7 @@ button {
   display: inline-block;
 }
 
-.banner_button_is-favorite {
+.banner_info_is-favorite {
   color: #000;
   font-size: 2.5rem;
   font-weight: 300;
@@ -441,7 +441,7 @@ button {
   right: 2rem;
 }
 
-.banner_button_is-favorite--no {
+.banner_info_is-favorite--no {
   position: relative;
   left: 0;
   opacity: 1;
@@ -449,7 +449,7 @@ button {
   transition: opacity 500ms;
 }
 
-.banner_button_is-favorite--yes {
+.banner_info_is-favorite--yes {
   position: absolute;
   left: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
@@ -461,11 +461,11 @@ button {
   transition: opacity 500ms;
 }
 
-#heart:checked + label > .banner_button_is-favorite--yes {
+#heart:checked + label > .banner_info_is-favorite--yes {
   opacity: 1;
 }
 
-#heart:checked + label > .banner_button_is-favorite--no {
+#heart:checked + label > .banner_info_is-favorite--no {
   opacity: 0;
 }
 

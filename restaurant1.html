@@ -21,20 +21,20 @@
 <body class="restaurant-page">
     <header class="header">
             <img class="header_logo" src="public/img/logo/ohmyfood.svg" alt="Logo"/>
-            <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></span></a> 
+            <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></a> 
     </header>
     
     <section class="banner">
         <img class="banner_img" src="./public/img/restaurants/restaurant_1.jpg" alt="La palette du gout"/>
-        <div class="banner_button">
-            <h1 class="banner_button_title">La Palette du goût</h1>
-            <div class="banner_button_is-favorite">
+        <div class="banner_info">
+            <h1 class="banner_info_title">La Palette du goût</h1>
+            <form class="banner_is-favorite">
                 <input class="hidden-checkbox" type="checkbox" id="heart"/>
                 <label for="heart">
-                    <i class="banner_button_is-favorite--no far fa-heart"></i>
-                    <i class="banner_button_is-favorite--yes fas fa-heart"></i>
+                    <i class="banner_is-favorite--no far fa-heart"></i>
+                    <i class="banner_is-favorite--yes fas fa-heart"></i>
                 </label>
-            </div>
+            </form>
         </div>
     </section>
     <main>
@@ -45,7 +45,7 @@
                     <div class="menu_chapter_underline"></div>
                 </div>
                 <div class="courses">
-                    <div id="menu-item-2" class="courses_card" href="#">
+                    <div id="menu-item-2" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Fricassé d'escargot</h3>
                             <p class="courses_card_desc_subtitle">Au piment d'Espelette</p>
@@ -57,7 +57,7 @@
                             <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div id="menu-item-3" class="courses_card" href="#">
+                    <div id="menu-item-3" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Foie gras de canard mi-cuit</h3>
                             <p class="courses_card_desc_subtitle">Et ses copeaux copeaux copeaux copeaux de truffe noire</p>
@@ -69,7 +69,7 @@
                             <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div id="menu-item-4" class="courses_card" href="#">
+                    <div id="menu-item-4" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Oeuf au plat</h3>
                             <p class="courses_card_desc_subtitle">Assaisonné à la truffe sur lit de caviar</p>
@@ -89,7 +89,7 @@
                     <div class="menu_chapter_underline"></div>
                 </div>
                 <div class="courses">
-                    <div id="menu-item-6" class="courses_card" href="#">
+                    <div id="menu-item-6" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Filet de boeuf aux herbes</h3>
                             <p class="courses_card_desc_subtitle">Accompagné de sa ribambelle de légumes</p>
@@ -101,7 +101,7 @@
                             <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div id="menu-item-7" class="courses_card" href="#">
+                    <div id="menu-item-7" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Parmentier de queue de boeuf</h3>
                             <p class="courses_card_desc_subtitle">À la truffe noire sur sa purée de panais</p>
@@ -113,7 +113,7 @@
                             <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div id="menu-item-8" class="courses_card" href="#">
+                    <div id="menu-item-8" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Filet de turbot</h3>
                             <p class="courses_card_desc_subtitle">Aux agrumes</p>
@@ -133,7 +133,7 @@
                     <div class="menu_chapter_underline"></div>
                 </div>
                 <div class="courses">
-                    <div id="menu-item-10" class="courses_card" href="#">
+                    <div id="menu-item-10" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Paris-Brest</h3>
                             <p class="courses_card_desc_subtitle">Revisité</p>
@@ -145,7 +145,7 @@
                             <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div id="menu-item-11" class="courses_card" href="#">
+                    <div id="menu-item-11" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Macaron au chocolat d'exception</h3>
                             <p class="courses_card_desc_subtitle">Et glace à la vanille de Madagascar</p>
@@ -157,7 +157,7 @@
                             <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div id="menu-item-12" class="courses_card" href="#">
+                    <div id="menu-item-12" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Mousse au chocolat</h3>
                             <p class="courses_card_desc_subtitle">Au piment d'Espelette et à la truffe noire</p>
@@ -173,7 +173,7 @@
             </div>
         </article>
         <div class="launch-command">
-            <button class="primary-button primary-button--clickable" type="button">Commander</button>
+            <button class="gradient-button gradient-button--clickable" type="button">Commander</button>
         </div>
     </main>
     <footer class="footer">

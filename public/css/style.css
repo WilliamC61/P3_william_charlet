@@ -79,7 +79,7 @@ button {
   font-weight: normal;
 }
 
-.primary-button {
+.gradient-button {
   height: 5rem;
   min-width: 18.6rem;
   padding: 0 2.5rem;
@@ -100,13 +100,13 @@ button {
   transition: opacity, box-shadow 500ms, -webkit-box-shadow 500ms;
 }
 
-.primary-button:hover {
+.gradient-button:hover {
   opacity: 80%;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
           box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
 }
 
-.primary-button--clickable:hover {
+.gradient-button--clickable:hover {
   cursor: pointer;
 }
 
@@ -328,10 +328,14 @@ button {
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
-  -webkit-box-shadow: 0px 0px 20px 5px #d1d1d1;
-          box-shadow: 0px 0px 20px 5px #d1d1d1;
+  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #dddddd;
+          box-shadow: 0.5rem 0.5rem 0.5rem #dddddd;
   position: relative;
   margin-bottom: 1.8rem;
+}
+
+.restaurants_list_card_link {
+  text-decoration: none;
 }
 
 .restaurants_list_card_img {
@@ -339,28 +343,30 @@ button {
   -o-object-fit: cover;
      object-fit: cover;
   height: 17.4rem;
+  display: block;
 }
 
 .restaurants_list_card_legend {
   margin-left: 1.2rem;
-  margin-top: 1.4rem;
+  margin-top: 1.7rem;
   font-size: 1.4rem;
   color: #000;
   padding-bottom: 1rem;
 }
 
 .restaurants_list_card_is-favorite {
-  color: #000;
+  bottom: 3rem;
+  width: 100%;
   font-size: 2.5rem;
   font-weight: 300;
   position: absolute;
-  bottom: 3rem;
-  right: 2rem;
 }
 
 .restaurants_list_card_is-favorite--no {
-  position: relative;
-  left: 0;
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0;
+  color: #000;
   opacity: 1;
   -webkit-transition: opacity 500ms;
   transition: opacity 500ms;
@@ -368,7 +374,8 @@ button {
 
 .restaurants_list_card_is-favorite--yes {
   position: absolute;
-  left: 0;
+  right: 1.22rem;
+  bottom: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
@@ -610,44 +617,47 @@ button {
   display: block;
 }
 
-.banner_button {
+.banner_info {
   width: 100%;
   height: 10rem;
   border-radius: 4rem;
   background-color: #F6F6F6;
-  padding-left: 1.8rem;
   position: absolute;
   bottom: -5rem;
 }
 
-.banner_button_title {
+.banner_info_title {
   padding-top: 3.6rem;
+  padding-left: 1.8rem;
   font-family: Shrikhand;
   font-size: 2.8rem;
   position: relative;
   display: inline-block;
 }
 
-.banner_button_is-favorite {
-  color: #000;
+.banner_is-favorite {
+  bottom: 4rem;
+  right: 2.5rem;
+  width: 100%;
   font-size: 2.5rem;
   font-weight: 300;
   position: absolute;
-  top: 3.6rem;
-  right: 2rem;
 }
 
-.banner_button_is-favorite--no {
-  position: relative;
-  left: 0;
+.banner_is-favorite--no {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0;
+  color: #000;
   opacity: 1;
   -webkit-transition: opacity 500ms;
   transition: opacity 500ms;
 }
 
-.banner_button_is-favorite--yes {
+.banner_is-favorite--yes {
   position: absolute;
-  left: 0;
+  right: 1.22rem;
+  bottom: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
@@ -657,11 +667,11 @@ button {
   transition: opacity 500ms;
 }
 
-#heart:checked + label > .banner_button_is-favorite--yes {
+#heart:checked + label > .banner_is-favorite--yes {
   opacity: 1;
 }
 
-#heart:checked + label > .banner_button_is-favorite--no {
+#heart:checked + label > .banner_is-favorite--no {
   opacity: 0;
 }
 
@@ -1134,63 +1144,63 @@ button {
 }
 
 #menu-item-1 {
-  -webkit-animation: menu_anim1 500ms linear 500ms 1 both;
-          animation: menu_anim1 500ms linear 500ms 1 both;
+  -webkit-animation: menu_anim1 400ms linear 200ms 1 both;
+          animation: menu_anim1 400ms linear 200ms 1 both;
 }
 
 #menu-item-2 {
-  -webkit-animation: menu_anim2 500ms linear 1000ms 1 both;
-          animation: menu_anim2 500ms linear 1000ms 1 both;
+  -webkit-animation: menu_anim2 400ms linear 400ms 1 both;
+          animation: menu_anim2 400ms linear 400ms 1 both;
 }
 
 #menu-item-3 {
-  -webkit-animation: menu_anim3 500ms linear 1500ms 1 both;
-          animation: menu_anim3 500ms linear 1500ms 1 both;
+  -webkit-animation: menu_anim3 400ms linear 600ms 1 both;
+          animation: menu_anim3 400ms linear 600ms 1 both;
 }
 
 #menu-item-4 {
-  -webkit-animation: menu_anim4 500ms linear 2000ms 1 both;
-          animation: menu_anim4 500ms linear 2000ms 1 both;
+  -webkit-animation: menu_anim4 400ms linear 800ms 1 both;
+          animation: menu_anim4 400ms linear 800ms 1 both;
 }
 
 #menu-item-5 {
-  -webkit-animation: menu_anim5 500ms linear 2500ms 1 both;
-          animation: menu_anim5 500ms linear 2500ms 1 both;
+  -webkit-animation: menu_anim5 400ms linear 1000ms 1 both;
+          animation: menu_anim5 400ms linear 1000ms 1 both;
 }
 
 #menu-item-6 {
-  -webkit-animation: menu_anim6 500ms linear 3000ms 1 both;
-          animation: menu_anim6 500ms linear 3000ms 1 both;
+  -webkit-animation: menu_anim6 400ms linear 1200ms 1 both;
+          animation: menu_anim6 400ms linear 1200ms 1 both;
 }
 
 #menu-item-7 {
-  -webkit-animation: menu_anim7 500ms linear 3500ms 1 both;
-          animation: menu_anim7 500ms linear 3500ms 1 both;
+  -webkit-animation: menu_anim7 400ms linear 1400ms 1 both;
+          animation: menu_anim7 400ms linear 1400ms 1 both;
 }
 
 #menu-item-8 {
-  -webkit-animation: menu_anim8 500ms linear 4000ms 1 both;
-          animation: menu_anim8 500ms linear 4000ms 1 both;
+  -webkit-animation: menu_anim8 400ms linear 1600ms 1 both;
+          animation: menu_anim8 400ms linear 1600ms 1 both;
 }
 
 #menu-item-9 {
-  -webkit-animation: menu_anim9 500ms linear 4500ms 1 both;
-          animation: menu_anim9 500ms linear 4500ms 1 both;
+  -webkit-animation: menu_anim9 400ms linear 1800ms 1 both;
+          animation: menu_anim9 400ms linear 1800ms 1 both;
 }
 
 #menu-item-10 {
-  -webkit-animation: menu_anim10 500ms linear 5000ms 1 both;
-          animation: menu_anim10 500ms linear 5000ms 1 both;
+  -webkit-animation: menu_anim10 400ms linear 2000ms 1 both;
+          animation: menu_anim10 400ms linear 2000ms 1 both;
 }
 
 #menu-item-11 {
-  -webkit-animation: menu_anim11 500ms linear 5500ms 1 both;
-          animation: menu_anim11 500ms linear 5500ms 1 both;
+  -webkit-animation: menu_anim11 400ms linear 2200ms 1 both;
+          animation: menu_anim11 400ms linear 2200ms 1 both;
 }
 
 #menu-item-12 {
-  -webkit-animation: menu_anim12 500ms linear 6000ms 1 both;
-          animation: menu_anim12 500ms linear 6000ms 1 both;
+  -webkit-animation: menu_anim12 400ms linear 2400ms 1 both;
+          animation: menu_anim12 400ms linear 2400ms 1 both;
 }
 
 @-webkit-keyframes desc-shrink {
