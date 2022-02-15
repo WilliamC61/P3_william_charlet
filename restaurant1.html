@@ -2,46 +2,188 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- to use device logical viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- pour compatibilité MS edge-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,900i" rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <title>Joe Blow's Portfolio | Contact</title>
+    <!-- style sheet path -->
+    <link rel="stylesheet" href="./public/css/style.css">
+    <!-- use of google fonts via CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- use of font awesome via bootstrap CDN -->
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+    <!-- page title -->
+    <title>ohmyfood</title>
 </head>
-<body>
-
+<body class="restaurant-page">
     <header class="header">
-        <h1 class="header__logo">
-            Joe Blow
-        </h1>
-        <nav class="nav">
-            <ul>
-                <li class="nav__link"> <a href="/">work</a> </li>
-                <li class="nav__link"> <a href="/about.html">about</a></li>
-                <li class="nav__link nav__link--active">contact </li>
-            </ul>
-        </nav>
+            <img class="header_logo" src="public/img/logo/ohmyfood.svg" alt="Logo"/>
+            <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></a> 
     </header>
- 
-    <main class="container">
-        <form class="form">
-            <h1 class="form__heading">Contact me</h1>
-            <div class="form__field">
-                <label for="contact-name">name</label>
-                <input type="text" name="contact-name" id="contact-name" autocomplete="name">
+    
+    <section class="banner">
+        <img class="banner_img" src="./public/img/restaurants/restaurant_1.jpg" alt="La palette du gout"/>
+        <div class="banner_info">
+            <h1 class="banner_info_title">La Palette du goût</h1>
+            <form class="banner_is-favorite">
+                <input class="hidden-checkbox" type="checkbox" id="heart"/>
+                <label for="heart">
+                    <i class="banner_is-favorite--no far fa-heart"></i>
+                    <i class="banner_is-favorite--yes fas fa-heart"></i>
+                </label>
+            </form>
+        </div>
+    </section>
+    <main>
+        <article class="menu">
+            <div class="menu_chapter">
+                <div id="menu-item-1" class="menu_chapter_header">
+                    <h2 class="menu_chapter_title">ENTRÉES</h2>
+                    <div class="menu_chapter_underline"></div>
+                </div>
+                <div class="courses">
+                    <div id="menu-item-2" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Fricassé d'escargot</h3>
+                            <p class="courses_card_desc_subtitle">Au piment d'Espelette</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>25€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-3" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Foie gras de canard mi-cuit</h3>
+                            <p class="courses_card_desc_subtitle">Et ses copeaux copeaux copeaux copeaux de truffe noire</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>35€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-4" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Oeuf au plat</h3>
+                            <p class="courses_card_desc_subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>20€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form__field">
-                <label for="contact-email">email</label>
-                <input type="email" name="contact-email" id="contact-email" autocomplete="email">
+            <div class="menu_chapter">
+                <div id="menu-item-5">
+                    <h2 class="menu_chapter_title">PLATS</h2>
+                    <div class="menu_chapter_underline"></div>
+                </div>
+                <div class="courses">
+                    <div id="menu-item-6" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Filet de boeuf aux herbes</h3>
+                            <p class="courses_card_desc_subtitle">Accompagné de sa ribambelle de légumes</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>40€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-7" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Parmentier de queue de boeuf</h3>
+                            <p class="courses_card_desc_subtitle">À la truffe noire sur sa purée de panais</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>35€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-8" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Filet de turbot</h3>
+                            <p class="courses_card_desc_subtitle">Aux agrumes</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>44€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form__field">
-                <label for="contact-message">message</label>
-                <textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
+            <div class="menu_chapter">
+                <div id="menu-item-9">
+                    <h2 class="menu_chapter_title">DESSERTS</h2>
+                    <div class="menu_chapter_underline"></div>
+                </div>
+                <div class="courses">
+                    <div id="menu-item-10" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Paris-Brest</h3>
+                            <p class="courses_card_desc_subtitle">Revisité</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>18€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-11" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Macaron au chocolat d'exception</h3>
+                            <p class="courses_card_desc_subtitle">Et glace à la vanille de Madagascar</p>
+                        </div>
+                            <div class="courses_card_price">
+                            <span>22€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-12" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Mousse au chocolat</h3>
+                            <p class="courses_card_desc_subtitle">Au piment d'Espelette et à la truffe noire</p>
+                        </div>
+                            <div class="courses_card_price">
+                            <span>23€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button class="btn btn--full-width">Submit</button>
-        </form>
+        </article>
+        <div class="launch-command">
+            <button class="gradient-button gradient-button--clickable" type="button">Commander</button>
+        </div>
     </main>
+    <footer class="footer">
+        <p class="footer_title">ohmyfood</p>
+        <div class="footer_list">
+            <a class="footer_list_item" href=#><i class="footer_list_item_icon fas fa-utensils"></i>Proposer un restaurant</a>
+            <a class="footer_list_item" href=#><i class="footer_list_item_icon fas fa-hands-helping"></i>Devenir partenaire</a>
+            <a class="footer_list_item" href="#">Mentions légales</a>
+            <a class="footer_list_item" href="mailto:contact@ohmyfood.com">Contact</a>
+        </div>
+    </footer>
 
 </body>
-
-</html>

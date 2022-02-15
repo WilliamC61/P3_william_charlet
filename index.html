@@ -1,122 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- to use device logical viewport-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- pour compatibilité MS edge-->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- style sheet path -->
-    <link rel="stylesheet" href="/public/css/style.css">
-    <!-- use of google fonts via CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- use of font awesome via bootstrap CDN -->
-    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
-    <!-- page title -->
-    <title>ohmyfood</title>
-</head>
-<body>
-    <header class="header">
+    <head>
+        <meta charset="UTF-8">
+        <!-- to use device logical viewport-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- pour compatibilité MS edge-->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- style sheet path -->
+        <link rel="stylesheet" href="./public/css/style.css">
+        <!-- use of google fonts via CDN -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand:wght@300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <!-- use of font awesome via bootstrap CDN -->
+        <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+        <!-- page title -->
+        <title>ohmyfood</title>
+    </head>
+    <body class="main-page">
+        <header class="header">
             <img class="header_logo" src="public/img/logo/ohmyfood.svg" alt="Logo"/>
-    </header>
-    <main class="main">
-        <section class="location">
-            <div>
-                <i class="location_map-icon fas fa-map-marker-alt"></i><span>Paris, Belleville</span>
+            <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></a>
+        </header>
+        <main class="main">
+            <div class="location">
+                <div>
+                    <i class="location_map-icon fas fa-map-marker-alt"></i><span>Paris, Belleville</span>
+                </div>
             </div>
-        </section>
-        <!-- section introduction -->
-        <section class="introduction">
-            <h1 class="introduction_title">Réserver le menu qui vous convient</h1>
-            <p class="introduction_subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="primary-button" type="button">Explorer nos restaurants</button>
-        </section>
-        <!-- Operation article -->
-        <article class=operation>
-            <h2 class="operation_title">Fonctionnement</h2>
-            <div class="operation_step operation_step--grey">
-                    <span class="operation_step_icon"><i class="fas fa-mobile-alt"></i></span><span>Choisissez un restaurant</span>
-                    <span class="operation_step_bullet">1</span>
-            </div>
-            <div class="operation_step  operation_step--grey">
-                <span class="operation_step_icon"><i class="fas fa-list"></i></span><span>Composez votre menu</span>
-                <span class="operation_step_bullet">2</span>
-            </div>
-            <div class="operation_step operation_step--colored">
-                <span class="operation_step_icon operation_step_icon--colored"><i class="fas fa-store"></i></span><span>Dégustez au restaurant</span>
-                <span class="operation_step_bullet">3</span>
-            </div>
-        </article>
-        <!-- Restaurant article -->
-        <article class="restaurants">
-            <h2>Restaurants</h2>
-            <div class= "restaurants_list">
-                <a class= "restaurants_list_card" href="restaurant_1">
-                    <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_1.jpg" alt="La palette du goût"/>
-                    <div class="restaurants_list_card_legend">
-                        <h3>La palette du goût</h3>
-                        <p>Menilmontant</p>
+            <!-- section introduction -->
+            <section class="introduction">
+                <h1 class="introduction_title">Réserver le menu qui vous convient</h1>
+                <p class="introduction_subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <button class="gradient-button" type="button">Explorer nos restaurants</button>
+            </section>
+            <!-- Operation article -->
+            <article class=operation>
+                <h2 class="operation_title">Fonctionnement</h2>
+                <div class="operation_step operation_step--grey">
+                        <span class="operation_step_icon"><i class="fas fa-mobile-alt"></i></span><span>Choisissez un restaurant</span>
+                        <span class="operation_step_bullet">1</span>
+                </div>
+                <div class="operation_step  operation_step--grey">
+                    <span class="operation_step_icon"><i class="fas fa-list"></i></span><span>Composez votre menu</span>
+                    <span class="operation_step_bullet">2</span>
+                </div>
+                <div class="operation_step operation_step--colored">
+                    <span class="operation_step_icon operation_step_icon--colored"><i class="fas fa-store"></i></span><span>Dégustez au restaurant</span>
+                    <span class="operation_step_bullet">3</span>
+                </div>
+            </article>
+            <!-- Restaurants article -->
+            <article class="restaurants">
+                <h2>Restaurants</h2>
+                <div class= "restaurants_list">
+                    <div class="restaurants_list_card restaurants_list_card--is-new">
+                        <a class="restaurants_list_card_link" href="restaurant1.html">
+                            <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_1.jpg" alt="La palette du goût"/>
+                            <div class="restaurants_list_card_legend">
+                                <h3>La palette du goût</h3>
+                                <p>Menilmontant</p>
+                            </div>
+                        </a>
+                        <form class="restaurants_list_card_is-favorite">
+                            <input class="hidden-checkbox" type="checkbox" id="heart1"/>
+                            <label for="heart1">
+                                <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
+                                <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
+                            </label>
+                        </form>
                     </div>
-                    <div class="restaurants_list_card_is-new">Nouveau</div>
-                    <div class="restaurants_list_card_is-favorite">
-                        <input class="hidden-checkbox" type="checkbox" id="heart1"/>
-                        <label for="heart1">
-                            <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
-                            <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
-                        </label>
+                    <div class="restaurants_list_card restaurants_list_card--is-new">
+                        <a class="restaurants_list_card_link" href="restaurant2.html">
+                            <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_2.jpg" alt="La palette du goût"/>
+                            <div class="restaurants_list_card_legend">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                        </a>
+                        <form class="restaurants_list_card_is-favorite">
+                            <input class="hidden-checkbox" type="checkbox" id="heart2"/>
+                            <label for="heart2">
+                                <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
+                                <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
+                            </label>
+                        </form>
                     </div>
-                </a>
-                <a class= "restaurants_list_card" href="restaurant_2">
-                    <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_2.jpg" alt="La palette du goût"/>
-                    <div class="restaurants_list_card_legend">
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
+                    <div class= "restaurants_list_card">
+                        <a class= "restaurants_list_card_link" href="restaurant3.html">
+                            <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_3.jpg" alt="La palette du goût"/>
+                            <div class="restaurants_list_card_legend">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                        </a>
+                        <form class="restaurants_list_card_is-favorite">
+                            <input class="hidden-checkbox" type="checkbox" id="heart3"/>
+                            <label for="heart3">
+                                <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
+                                <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
+                            </label>
+                        </form>
                     </div>
-                    <div class="restaurants_list_card_is-new">Nouveau</div>
-                    <div class="restaurants_list_card_is-favorite">
-                        <input class="hidden-checkbox" type="checkbox" id="heart2"/>
-                        <label for="heart2">
-                            <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
-                            <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
-                        </label>
+                    <div class="restaurants_list_card">
+                        <a class= "restaurants_list_card_link" href="restaurant4.html">
+                            <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_4.jpg" alt="La palette du goût"/>
+                            <div class="restaurants_list_card_legend">
+                                <h3>Le délice des sens</h3>
+                                <p>Follie-mericourt</p>
+                            </div>
+                        </a>
+                        <form class="restaurants_list_card_is-favorite">
+                            <input class="hidden-checkbox" type="checkbox" id="heart4"/>
+                            <label for="heart4">
+                                <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
+                                <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
+                            </label>
+                        </form>
                     </div>
-                </a>
-                <a class= "restaurants_list_card" href="restaurant_3">
-                    <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_3.jpg" alt="La palette du goût"/>
-                    <div class="restaurants_list_card_legend">
-                        <h3>À la française</h3>
-                        <p>Cité Rouge</p>
-                    </div>
-                    <!-- <div class="restaurants_list_card_is-new">Nouveau</div> -->
-                    <div class="restaurants_list_card_is-favorite">
-                        <input class="hidden-checkbox" type="checkbox" id="heart3"/>
-                        <label for="heart3">
-                            <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
-                            <i class="restaurants_list_card_is-favorite--yes fas fa-heart"></i>
-                        </label>
-                    </div>
-                </a>
-                <a class= "restaurants_list_card" href="restaurant_4">
-                    <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_4.jpg" alt="La palette du goût"/>
-                    <div class="restaurants_list_card_legend">
-                        <h3>Le délice des sens</h3>
-                        <p>Follie-mericourt</p>
-                    </div>
-                    <!-- <div class="restaurants_list_card_is-new">Nouveau</div> -->
-                    <div class="restaurants_list_card_is-favorite">
-                        <input class="hidden-checkbox" type="checkbox" id="heart4"/>
-                        <label for="heart4">
-                            <i class="restaurants_list_card_is-favorite--no far fa-heart"></i>
-                            <i class="restaurants_list_card_is-favorite--yes fas fa-heart fa-gradient"></i>
-                        </label>
-                    </div>
-                </a>
-                
-            </div>
-        </article>
+                </div>
+            </article>
+        </main>
         <footer class="footer">
             <p class="footer_title">ohmyfood</p>
             <div class="footer_list">
@@ -126,5 +131,9 @@
                 <a class="footer_list_item" href="mailto:contact@ohmyfood.com">Contact</a>
             </div>
         </footer>
+        <div class="loading-spinner">
+            <span class="loading-spinner_circle"></span>
+        </div>
     </body>
 </html>
+

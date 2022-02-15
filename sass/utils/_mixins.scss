@@ -1,13 +1,54 @@
+@mixin box-shadow {
+    box-shadow: 0.5rem 0.5rem 0.5rem darken($color-very-light-grey, 10%);
+}
+@mixin box-shadow-dark {
+    box-shadow: 0.5rem 0.5rem 0.5rem darken($color-very-light-grey, 30%);
+}
 
-@mixin primary-button {
+@mixin gradient-button {
     height: 5rem;
-    margin-top: 3.2rem;
+    min-width: 18.6rem;
     padding: 0 2.5rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    font-style:normal;
+    font-style: normal;
     border-radius: 2.5rem;
     color: $color-white;
     border: none;
-    background: linear-gradient($color-secondary, $color-primary);
+    background: $pink-gradient;
+    @include box-shadow();
+    opacity: 1;
+    transition: opacity, box-shadow 500ms;
+    &:hover{
+        opacity: 80%;
+        @include box-shadow-dark();
+    }
+    &--clickable:hover {
+        cursor: pointer;
+    }
 }    
+
+@mixin is-favorite {
+    width:100%;
+    font-size: 2.5rem;
+    font-weight: 300;
+    position: absolute;
+    &--no {
+        position: absolute;
+        right: 1.2rem;
+        bottom: 0;
+        color: $color-black;
+        opacity: 1;
+        transition: opacity 500ms;
+    }
+    &--yes{
+        position:absolute;
+        right: 1.22rem;
+        bottom: 0;
+        background: $pink-gradient;
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transition: opacity 500ms; 
+    }
+}
