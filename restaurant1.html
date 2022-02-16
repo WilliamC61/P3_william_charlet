@@ -24,20 +24,20 @@
             <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></a> 
     </header>
     
-    <section class="banner">
+    <div class="banner">
         <img class="banner_img" src="./public/img/restaurants/restaurant_1.jpg" alt="La palette du gout"/>
-        <div class="banner_info">
-            <h1 class="banner_info_title">La Palette du goût</h1>
-            <form class="banner_is-favorite">
+    </div>
+    <main class="main-restaurant">
+       <div class="restaurant-info">
+            <h1 class="restaurant-info_name">La palette du goût</h1>
+            <form class="restaurant-info_is-favorite">
                 <input class="hidden-checkbox" type="checkbox" id="heart"/>
                 <label for="heart">
-                    <i class="banner_is-favorite--no far fa-heart"></i>
-                    <i class="banner_is-favorite--yes fas fa-heart"></i>
+                    <i class="restaurant-info_is-favorite--no far fa-heart"></i>
+                    <i class="restaurant-info_is-favorite--yes fas fa-heart"></i>
                 </label>
             </form>
         </div>
-    </section>
-    <main>
         <article class="menu">
             <div class="menu_chapter">
                 <div id="menu-item-1" class="menu_chapter_header">
@@ -60,7 +60,7 @@
                     <div id="menu-item-3" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Foie gras de canard mi-cuit</h3>
-                            <p class="courses_card_desc_subtitle">Et ses copeaux copeaux copeaux copeaux de truffe noire</p>
+                            <p class="courses_card_desc_subtitle">Et ses copeaux de truffe noire</p>
                         </div>
                         <div class="courses_card_price">
                             <span>35€</span>
@@ -174,7 +174,7 @@
         </article>
         <div class="launch-command">
             <button class="gradient-button gradient-button--clickable" type="button">Commander</button>
-        </div>
+        </div> 
     </main>
     <footer class="footer">
         <p class="footer_title">ohmyfood</p>
