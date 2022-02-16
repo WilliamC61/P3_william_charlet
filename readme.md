@@ -1,3 +1,5 @@
-# Produce maintainable CSS stylesheets with SASS
+# P3 project
 
-CSS is the palette we use to paint the web, making pages beautiful, identifiable, and responsive. In this class we’ll learn to write clean, maintainable, and modular CSS code through the implementation of designed naming and file structures, such as BEM, and the use of SASS, a CSS precompiler.
+implementaiton of a site mockup to select one restaurant and order a menu in this reataurant
+main page index.htlm allow selection of the restaurant
+restaurant<i> pages allow the selection of the meal in the selected restaurant.
