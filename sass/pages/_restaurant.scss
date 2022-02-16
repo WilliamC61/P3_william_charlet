@@ -112,6 +112,9 @@
         @include laptop() {
            width: 32%;
         }
+        @include desktop() {
+            width: 32%;
+        }
         &_title{
             padding-top: 0.3rem;
             font-size: 1.6rem;
