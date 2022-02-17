@@ -9,14 +9,14 @@
     height: 5rem;
     min-width: 18.6rem;
     padding: 0 2.5rem;
+    border: none;
+    border-radius: 2.5rem;
+    color: $color-white;
+    background: $pink-gradient;
+    @include box-shadow();
     font-size: 1.6rem;
     font-weight: 500;
     font-style: normal;
-    border-radius: 2.5rem;
-    color: $color-white;
-    border: none;
-    background: $pink-gradient;
-    @include box-shadow();
     opacity: 1;
     transition: opacity, box-shadow 500ms;
     &:hover{
@@ -53,25 +53,35 @@
     }
 }
 
+
+//================================================================================
+/*              REsponsive categories vs breakpoints                            *
+ *    mobile-bkpt            tablet-bkpt        laptop-bkpt     desktop-bkpt    *
+ * mobile |        small-tablet    |      tablet     |     laptop    | desktop  *
+ *                                                                              */
+//================================================================================
 @mixin mobile {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $mobile-breakpoint - 1) {
         @content;
     }   
 }
-
+@mixin small-tablet {
+    @media screen and (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint - 1) {
+        @content;
+    }   
+}
 @mixin tablet {
-    @media screen and (min-width: 768px) and (max-width: 991px) {
+    @media screen and (min-width: $tablet-breakpoint) and (max-width: $laptop-breakpoint - 1) {
         @content;
     }   
 }
-
 @mixin laptop {
-    @media  screen and (min-width: 992px) and (max-width: 1199px) {
+    @media  screen and (min-width: $laptop-breakpoint) and (max-width: $desktop-breakpoint - 1) {
         @content;
     }
 }
 @mixin desktop {
-    @media  (min-width: 1200px) {
+    @media  (min-width: $desktop-breakpoint) {
         @content;
     }
 }

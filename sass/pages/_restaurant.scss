@@ -7,6 +7,9 @@
         @include mobile() {
             height: 26rem;
         }
+        @include small-tablet {
+            height: 30rem;
+        }
         @include tablet() {
             height: 35rem;
         }
@@ -16,16 +19,24 @@
         @include desktop() {
             height: 44rem;
          }
-        height: 70%;
+       
         object-fit: cover;
         display:block;
     }
 }
 
 .main-restaurant {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right:auto;
+    @include small-tablet() {
+        max-width: $mobile-breakpoint;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    @include desktop() {
+        max-width: $desktop-breakpoint;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    
     width: 100%;
     border-radius: 4rem 4rem 0 0;
     padding-left: 2rem;
@@ -36,22 +47,11 @@
     margin-bottom: -4rem;    
 }
 .restaurant-info {
+    width: 100%;
+    justify-content:space-around;
     @include mobile() {
-        width: 100%;
         justify-content:space-between
     }
-    @include tablet() {
-        width: 100%;
-        justify-content:space-around;
-    }
-    @include laptop() {
-       width: 100%;
-       justify-content:space-around;
-    }  
-    @include desktop() {
-        width: 100%;
-        justify-content:space-around;
-     }
     height: 10rem;
     display: flex;
     flex-direction: row;
@@ -78,32 +78,18 @@
 }
 
 .menu {
-   // background-color: $color-very-light-grey;
     margin-top: -5rem;
     padding-top: 5rem;
-
     display: flex;
-    @include mobile() {
-        flex-direction: column;
-    }
-    @include tablet() {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    @include laptop() {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    @include desktop() {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     &_chapter {
         padding-bottom: 1.8rem;
         @include mobile() {
+            width: 100%;
+        }
+        @include small-tablet(){
             width: 100%;
         }
         @include tablet() {

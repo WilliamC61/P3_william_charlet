@@ -26,12 +26,18 @@
         line-height: 1.1;
     }
 }
-.main-welcome {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .operation {
+    @include small-tablet() {
+        max-width: $mobile-breakpoint;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    @include desktop() {
+        max-width: $desktop-breakpoint;
+        margin-left: auto;
+        margin-right:auto;
+    }
     margin-top: 5rem;
     background-color: $color-white;
     padding-left: 3rem;
@@ -42,26 +48,17 @@
     }
     &_list {
         display: flex;
-        @include mobile() {
-            flex-direction: column;
-        }
-        @include tablet() {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        @include laptop() {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        @include desktop() {
-            flex-direction: row;
-            justify-content: space-between;
-        }
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
  
 .operation_list_step {
     @include mobile() {
+        width: 100%;
+    }
+    @include small-tablet() {
         width: 100%;
     }
     @include tablet() {
@@ -71,8 +68,9 @@
         width: 31%;
     }
     @include desktop() {
-        width: 28%;
+        width: 31%;
     }
+    flex-shrink: 0;
     font-weight: 500;
     font-size: 1.5rem;
     height: 7.3rem;
@@ -82,7 +80,6 @@
     display: flex;
     align-items: center;
     position:relative;
-
     &--grey {
         background-color: $color-very-light-grey;
         @include box-shadow();
@@ -123,8 +120,17 @@
         left:-1.2rem;
     }
 }
- 
 .restaurants {
+    @include small-tablet() {
+        max-width: $mobile-breakpoint;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    @include desktop() {
+        max-width: $desktop-breakpoint;
+        margin-left: auto;
+        margin-right:auto;
+    }
     margin-top: 6.6rem;
     background-color: $color-very-light-grey;
     padding: 5.4rem 2rem 3rem 2rem;
@@ -132,24 +138,14 @@
         margin-top: 2.4rem;
         padding-bottom: 1.6rem;
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        @include mobile() {
-            flex-direction: column;
-        }
-        @include tablet() {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        @include laptop() {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        @include desktop() {
-            flex-direction: row;
-            justify-content: space-between;
-        }
+        justify-content: space-between;
         &_card {
             @include mobile() {
+                width: 100%;
+            }
+            @include small-tablet() {
                 width: 100%;
             }
             @include tablet() {
@@ -172,7 +168,7 @@
             &_link {
                 text-decoration: none;
             }
-            &_img{
+            &_img {
                 width: 100%;
                 object-fit: cover;
                 height: 17.4rem;
@@ -192,8 +188,7 @@
         }
     }
 }
-
- .restaurants_list_card--is-new {
+.restaurants_list_card--is-new {
     &:after {
         content: "Nouveau";
         height: 2.8rem;
@@ -271,6 +266,7 @@
 .main-page {
     animation: scroll-disable 3s linear both;
 }
+
 .loading-spinner {
     width: 100%;
     height: 100vh;
