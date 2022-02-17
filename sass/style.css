@@ -240,7 +240,23 @@ button {
   padding-bottom: 3rem;
 }
 
-.operation_step {
+.operation_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*  @include mobile() {
+            flex-direction: column;
+        }
+        @include tablet() {
+            flex-direction: row;
+        } */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.operation_list_step {
   font-weight: 500;
   font-size: 1.5rem;
   height: 7.3rem;
@@ -255,7 +271,7 @@ button {
   position: relative;
 }
 
-.operation_step--grey {
+.operation_list_step--grey {
   background-color: #F6F6F6;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #dddddd;
           box-shadow: 0.5rem 0.5rem 0.5rem #dddddd;
@@ -265,13 +281,13 @@ button {
   transition: background-color, box-shadow 500ms, -webkit-box-shadow 500ms;
 }
 
-.operation_step--grey:hover {
+.operation_list_step--grey:hover {
   background-color: #fbfbfb;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
           box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
 }
 
-.operation_step--colored {
+.operation_list_step--colored {
   background-color: #F5EDFF;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #dddddd;
           box-shadow: 0.5rem 0.5rem 0.5rem #dddddd;
@@ -281,23 +297,23 @@ button {
   transition: background-color, box-shadow 500ms, -webkit-box-shadow 500ms;
 }
 
-.operation_step--colored:hover {
+.operation_list_step--colored:hover {
   background-color: #fbf7ff;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
           box-shadow: 0.5rem 0.5rem 0.5rem #aaaaaa;
 }
 
-.operation_step_icon {
+.operation_list_step_icon {
   padding: 0 2.7rem 0 3.4rem;
   color: #7E7E7E;
   font-size: 2.1rem;
 }
 
-.operation_step_icon--colored {
+.operation_list_step_icon--colored {
   color: #9356DC;
 }
 
-.operation_step_bullet {
+.operation_list_step_bullet {
   height: 2.4rem;
   width: 2.4rem;
   border-radius: 1.2rem;
@@ -1266,14 +1282,12 @@ button {
             transform: rotate(360deg);
   }
 }
-
 .courses_card:hover .courses_card_desc {
-  -webkit-animation: desc-shrink 0.5s linear 0s 1  both;
-          animation: desc-shrink 0.5s linear 0s 1  both;
+  -webkit-animation: desc-shrink 0.3s linear 0s 1  both;
+          animation: desc-shrink 0.3s linear 0s 1  both;
 }
-
 .courses_card:hover .courses_card_check-mark_icone {
-  -webkit-animation: icon-rotate 0.5s linear 0s 1  both;
-          animation: icon-rotate 0.5s linear 0s 1  both;
+  -webkit-animation: icon-rotate 0.3s linear 0s 1  both;
+          animation: icon-rotate 0.3s linear 0s 1  both;
 }
 /*# sourceMappingURL=style.css.map */

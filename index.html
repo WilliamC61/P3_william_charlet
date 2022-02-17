@@ -1,10 +1,35 @@
+<!--
+//==============================================================================
+/*                                                                            *
+ *                         index : welcome page                               *
+ *                                                                            *
+ * Responsiveness consider 4 breakpoints for mobile (and below), smal-tablet, *
+ * tablet, laptop and desktop (and above)                                     *
+ *  - Mobile follows stricly the given mockup                                 *
+ *  - small-tablet : addition of a max-width to stop the growth operation and *
+ *    and restaurant lsit to avoid flattening of operation steps and          *
+ *    restaurant crads                                                        *
+ *    to avoid too much flattening of course cards                            *
+ *  - Tablet : max-width is removed, operations steps are displayed side by   *
+ *    with text on 2 lines. restaurant cards are dispaly in a 2 by 2 table.   *
+ *  - Laptop : same a tablet except that the restaurant cars are all          *
+ *    displayed side by side one one row.                                     *
+ *  - Desktop : same a laptop with reintroduction of max-width too flattened  *
+ *    of operaton steps and restaurant cards                                  *
+ * This behavior is obtained by playing only on the width of the operation    *
+ * steps and restaurant cards with one flex box configuration.                * 
+ * A max-width of small-tablet and desktop breakpoint is used to limi width   *
+ * of operation and restaurant list                                           */
+//==============================================================================
+--> 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <!-- to use device logical viewport-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- pour compatibilité MS edge-->
+        <!-- for MS edge compatibility -->
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!-- style sheet path -->
         <link rel="stylesheet" href="./public/css/style.css">
@@ -18,43 +43,110 @@
         <!-- page title -->
         <title>ohmyfood</title>
     </head>
+    <!--
+    //==============================================================================
+    /*                                                                            *
+     * body, include:                                                             *
+     *  - header                                                                  *
+     *  - main :includes                                                          *
+     *    o location                                                              *
+     *    o introduction                                                          *
+     *    o operation                                                             *
+     *    o restaurants article                                                   *
+     * - footer                                                                   *
+     *                                                                            */
+    //==============================================================================
+    -->
     <body class="main-page">
+        <!-- 
+        //──── header : website logo. link to main page is deactivated as already on main page ───        -->
         <header class="header">
             <img class="header_logo" src="public/img/logo/ohmyfood.svg" alt="Logo"/>
             <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></a>
         </header>
-        <main class="main">
+
+        <!--
+        //──── main : location, introduction, restaurants list ─────────────────
+        -->
+        <main class="main-welcome">
+           <!--
+            //──── location : map icon + area name for restaurants list ────────
+            -->
             <div class="location">
                 <div>
                     <i class="location_map-icon fas fa-map-marker-alt"></i><span>Paris, Belleville</span>
                 </div>
             </div>
-            <!-- section introduction -->
+            <!--
+            //──── introduction : summary of site objective ────────
+            -->
             <section class="introduction">
                 <h1 class="introduction_title">Réserver le menu qui vous convient</h1>
                 <p class="introduction_subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                 <button class="gradient-button" type="button">Explorer nos restaurants</button>
             </section>
-            <!-- Operation article -->
+
+            <!--
+            //──── operation article : title + operation steps list  ────────
+            -->
             <article class=operation>
                 <h2 class="operation_title">Fonctionnement</h2>
-                <div class="operation_step operation_step--grey">
-                        <span class="operation_step_icon"><i class="fas fa-mobile-alt"></i></span><span>Choisissez un restaurant</span>
-                        <span class="operation_step_bullet">1</span>
-                </div>
-                <div class="operation_step  operation_step--grey">
-                    <span class="operation_step_icon"><i class="fas fa-list"></i></span><span>Composez votre menu</span>
-                    <span class="operation_step_bullet">2</span>
-                </div>
-                <div class="operation_step operation_step--colored">
-                    <span class="operation_step_icon operation_step_icon--colored"><i class="fas fa-store"></i></span><span>Dégustez au restaurant</span>
-                    <span class="operation_step_bullet">3</span>
+                <!--
+                //==============================================================================
+                /*                                                                            *
+                 * Operation step list: includes 3 not clickable button for each step of the  *
+                 * process. it a row flex box  w/ wrap                                        *                                                                *
+                 *                                                                            */
+                //==============================================================================
+                -->
+                <div class="operation_list">
+                    <!--
+                    //──── operation step : icon +  steps description + number in circle ───────
+                    -->
+
+                    <div class="operation_list_step operation_list_step--grey">
+                            <span class="operation_list_step_icon"><i class="fas fa-mobile-alt"></i></span><span>Choisissez un restaurant</span>
+                            <span class="operation_list_step_bullet">1</span>
+                    </div>
+                    <div class="operation_list_step  operation_list_step--grey">
+                        <span class="operation_list_step_icon"><i class="fas fa-list"></i></span><span>Composez votre menu</span>
+                        <span class="operation_list_step_bullet">2</span>
+                    </div>
+                    <div class="operation_list_step operation_list_step--colored">
+                        <span class="operation_list_step_icon operation_list_step_icon--colored"><i class="fas fa-store"></i></span><span>Dégustez au restaurant</span>
+                        <span class="operation_list_step_bullet">3</span>
+                    </div>
                 </div>
             </article>
-            <!-- Restaurants article -->
+
+            <!--
+            //──── restaurant article : title + restaurants list  ────────
+            --> 
             <article class="restaurants">
                 <h2>Restaurants</h2>
+                <!--
+                //==============================================================================
+                /*                                                                            *
+                 * Restaurants list: includes 4 clickable restaurants cards                   *
+                 * process. it a row flex box  w/ wrap                                        *                                                                *
+                 *                                                                            */
+                //==============================================================================
+                -->
                 <div class= "restaurants_list">
+                    <!--
+                    //==============================================================================
+                    /*                                                                            *
+                     * Restaurant card: main part is an anchor <a> including restaurant picture,  *
+                     * restaurant legend (name + area).                                           *
+                     * the new  banner ("Nouveau") is displayed in :after of card having --is-new *
+                     * class variant.                                                             *
+                     * The is-favorite heart is obtained using the label of an hidden checkbox    *
+                     * the label includes 2 hearts displayed alternativaly depending on checkbox  *
+                     * state. this is done in a form followin the anchor (form not authorized as  *
+                     * anchor child).                                                             *
+                     *                                                                            */
+                    //==============================================================================
+                    -->
                     <div class="restaurants_list_card restaurants_list_card--is-new">
                         <a class="restaurants_list_card_link" href="restaurant1.html">
                             <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_1.jpg" alt="La palette du goût"/>
@@ -71,9 +163,13 @@
                             </label>
                         </form>
                     </div>
+
+                    <!--
+                    //──── restaurant2 card  ────────
+                    -->
                     <div class="restaurants_list_card restaurants_list_card--is-new">
                         <a class="restaurants_list_card_link" href="restaurant2.html">
-                            <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_2.jpg" alt="La palette du goût"/>
+                            <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_2.jpg" alt="La note enchantée"/>
                             <div class="restaurants_list_card_legend">
                                 <h3>La note enchantée</h3>
                                 <p>Charonne</p>
@@ -87,6 +183,9 @@
                             </label>
                         </form>
                     </div>
+                    <!--
+                    //──── restaurant3 card  ────────
+                    -->
                     <div class= "restaurants_list_card">
                         <a class= "restaurants_list_card_link" href="restaurant3.html">
                             <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_3.jpg" alt="La palette du goût"/>
@@ -103,6 +202,9 @@
                             </label>
                         </form>
                     </div>
+                    <!--
+                    //──── restaurant4  card  ────────
+                    -->
                     <div class="restaurants_list_card">
                         <a class= "restaurants_list_card_link" href="restaurant4.html">
                             <img class="restaurants_list_card_img" src="public/img/restaurants/restaurant_4.jpg" alt="La palette du goût"/>
@@ -122,6 +224,17 @@
                 </div>
             </article>
         </main>
+    
+        <!--
+        //==============================================================================
+        /*                                                                            *
+         * footer (common to all pages): include 4 links                              *
+         * The 3 first are dummies and move to top page.                              *
+         * The 4th one is mailto, and open default mailer to write main to            *
+         * "contact@ohmyfood"                                                         *
+         *                                                                            */
+        //==============================================================================
+        -->
         <footer class="footer">
             <p class="footer_title">ohmyfood</p>
             <div class="footer_list">
@@ -131,6 +244,17 @@
                 <a class="footer_list_item" href="mailto:contact@ohmyfood.com">Contact</a>
             </div>
         </footer>
+
+        <!--
+        //==============================================================================
+        /*                                                                            *
+         * loading spinner                                                            *
+         * put at the end of the page to cover everything.                            *
+         * During animation, scrolling is deiables. Refer to css for annimation       *
+         * explanations.                                                              *
+         *                                                                            */
+        //==============================================================================
+        -->
         <div class="loading-spinner">
             <span class="loading-spinner_circle"></span>
         </div>

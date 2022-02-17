@@ -26,19 +26,56 @@
         line-height: 1.1;
     }
 }
+
 .operation {
+    @include small-tablet() {
+        max-width: $mobile-breakpoint;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    @include desktop() {
+        max-width: $desktop-breakpoint;
+        margin-left: auto;
+        margin-right:auto;
+    }
     margin-top: 5rem;
     background-color: $color-white;
+    padding-left: 3rem;
+    padding-right: 3rem;
     &_title{
-        padding-left: 1.8rem;
         padding-bottom: 3rem;
+        margin-left:-1.2rem;
+    }
+    &_list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
-.operation_step {
+ 
+.operation_list_step {
+    @include mobile() {
+        width: 100%;
+    }
+    @include small-tablet() {
+        width: 100%;
+    }
+    @include tablet() {
+        width: 31%;
+    }
+    @include laptop() {
+        width: 31%;
+    }
+    @include desktop() {
+        width: 31%;
+    }
+    flex-shrink: 0;
     font-weight: 500;
     font-size: 1.5rem;
     height: 7.3rem;
-    margin: 0 3rem 2.4rem 3rem;
+    margin: 0 0 2.4rem 0;
+    padding-right: 2rem;
     border-radius: 2.5rem;
     display: flex;
     align-items: center;
@@ -83,15 +120,43 @@
         left:-1.2rem;
     }
 }
- 
 .restaurants {
+    @include small-tablet() {
+        max-width: $mobile-breakpoint;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    @include desktop() {
+        max-width: $desktop-breakpoint;
+        margin-left: auto;
+        margin-right:auto;
+    }
     margin-top: 6.6rem;
     background-color: $color-very-light-grey;
     padding: 5.4rem 2rem 3rem 2rem;
     &_list {
         margin-top: 2.4rem;
         padding-bottom: 1.6rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         &_card {
+            @include mobile() {
+                width: 100%;
+            }
+            @include small-tablet() {
+                width: 100%;
+            }
+            @include tablet() {
+               width: 48%;
+            }
+            @include laptop() {
+                width: 23%;
+            }
+            @include desktop() {
+                width: 23%;
+            }
             display: block;
             text-decoration: none;
             background-color: white;
@@ -103,7 +168,7 @@
             &_link {
                 text-decoration: none;
             }
-            &_img{
+            &_img {
                 width: 100%;
                 object-fit: cover;
                 height: 17.4rem;
@@ -123,8 +188,7 @@
         }
     }
 }
-
- .restaurants_list_card--is-new {
+.restaurants_list_card--is-new {
     &:after {
         content: "Nouveau";
         height: 2.8rem;
@@ -202,6 +266,7 @@
 .main-page {
     animation: scroll-disable 3s linear both;
 }
+
 .loading-spinner {
     width: 100%;
     height: 100vh;

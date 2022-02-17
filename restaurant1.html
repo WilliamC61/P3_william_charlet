@@ -1,10 +1,38 @@
+<!--
+//==============================================================================
+/*                                                                            *
+ *                             Restaurant1 page                               *
+ *                                                                            *
+ * Structure is common for the 4 restaurants, only texts are changed except   *
+ * for restaurant2 "La note enchantée" for whih a 4th starter is added.       *
+ * Responsiveness consider 4 breakpoints for mobile (and below), smal-tablet, *
+ * tablet, laptop and desktop                                                 *
+ *  - Mobile follows stricly the given mockup                                 *
+ *  - small-tablet : banner height is slightly increased, restaurant name is  *
+ *    centered and addition of a max-width to stop the growth of menu width   *
+ *    to avoid too much flattening of course cards                            *
+ *  - Tablet : the banner height is slightly increased, restaurant name is    *
+ *    kept centered, max-width is removed as starter and main chapters are    *
+ *    displayed side by side, dessert chapter is centered below.              *
+ *  - Laptop : same a tablet except that the 3 chapters are displayed side by *
+ *    side.                                                                   *
+ *  - Destop : same a laptop with reintroduction of max-width too flattened   *
+ *    courses cards                                                           *
+ * For the menu, this behavior is obtained by playing only on the width of    *
+ * menu chapters with one flex box configuration. a max-width of              *
+ * small-tablet anddesktop breakpoint is used to limmit menu width growth.    *
+ * For restaurant name, justify-content is changed from space-around to space *
+ * between for mobile only.                                                   */              
+//==============================================================================
+--> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <!-- to use device logical viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- pour compatibilité MS edge-->
+    <!-- for MS edge compatibility-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- style sheet path -->
     <link rel="stylesheet" href="./public/css/style.css">
@@ -16,35 +44,99 @@
     <!-- use of font awesome via bootstrap CDN -->
     <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
     <!-- page title -->
-    <title>ohmyfood</title>
+    <title>La palette du goût</title>
 </head>
+
+<!--
+//==============================================================================
+/*                                                                            *
+ * body, include:                                                             *
+ * - header                                                                   *
+ * - banner                                                                   *
+ * - introduction                                                             *
+ * - main : includes:                                                         *
+ *   o restaurant-info                                                        *
+ *   o menu                                                                   *
+ *   o launch-command button                                                  *
+ * - footer                                                                   *
+ *                                                                            */
+//==============================================================================
+-->
 <body class="restaurant-page">
+
+    <!-- 
+    //──── header : website logo and link to main page ─────────────────────────
+    -->
     <header class="header">
             <img class="header_logo" src="public/img/logo/ohmyfood.svg" alt="Logo"/>
             <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></a> 
     </header>
-    
-    <section class="banner">
+
+    <!--
+    //──── banner : restaurant image ───────────────────────────────────────────   
+    -->
+    <div class="banner">
         <img class="banner_img" src="./public/img/restaurants/restaurant_1.jpg" alt="La palette du gout"/>
-        <div class="banner_info">
-            <h1 class="banner_info_title">La Palette du goût</h1>
-            <form class="banner_is-favorite">
+    </div>
+
+    <!--
+    //──── main : restaurant-info, menu, launch command button ─────────────────
+    -->
+    <main class="main-restaurant">
+
+        <!--
+        //──── restaurant-info : restaurant name and is-favorite icon ──────────  
+        -->
+       <div class="restaurant-info">
+            <h1 class="restaurant-info_name">La palette du goût</h1>
+            <form class="restaurant-info_is-favorite">
                 <input class="hidden-checkbox" type="checkbox" id="heart"/>
                 <label for="heart">
-                    <i class="banner_is-favorite--no far fa-heart"></i>
-                    <i class="banner_is-favorite--yes fas fa-heart"></i>
+                    <i class="restaurant-info_is-favorite--no far fa-heart"></i>
+                    <i class="restaurant-info_is-favorite--yes fas fa-heart"></i>
                 </label>
             </form>
         </div>
-    </section>
-    <main>
+
+        <!--
+        //==============================================================================
+        /*                                                                            *
+         * menu is divided in menu chapters listing course cards                      *
+         * It is a flew box w/ wrap                                                   *
+         * Each menu item, chapter or course card, has an id for animation            *
+         *                                                                            */
+        //==============================================================================
+        -->
         <article class="menu">
+            <!--
+            //──── menu_chapter : header and courses cards list ────────────────────────────    
+            -->
             <div class="menu_chapter">
+                <!--
+                //──── header : title= course type (starter, main, dessert) ────────────────────    
+                -->
                 <div id="menu-item-1" class="menu_chapter_header">
                     <h2 class="menu_chapter_title">ENTRÉES</h2>
                     <div class="menu_chapter_underline"></div>
                 </div>
+                <!--
+                //──── courses : list of courses card ──────────────────────────────────────────
+                -->
                 <div class="courses">
+                    <!--
+                    //==============================================================================
+                    /*                                                                            *
+                     * course card includes 3 parts in a row:                                     *
+                     * - course description with title and subtitle                               *
+                     * - price                                                                    *
+                     * - check-mark                                                               *
+                     * it a row flex box w/o wrap and w/o shrink                                  *
+                     * At initial stage, no space to display check-box. During annimation         *
+                     * description width is reduced to allow appearence of check-box.             *
+                     * Elipsis is used to avoid text wrap and ... appearance.                     *
+                     *                                                                            */
+                    //==============================================================================
+                    -->
                     <div id="menu-item-2" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Fricassé d'escargot</h3>
@@ -60,7 +152,7 @@
                     <div id="menu-item-3" class="courses_card">
                         <div class="courses_card_desc">
                             <h3 class="courses_card_desc_title">Foie gras de canard mi-cuit</h3>
-                            <p class="courses_card_desc_subtitle">Et ses copeaux copeaux copeaux copeaux de truffe noire</p>
+                            <p class="courses_card_desc_subtitle">Et ses copeaux de truffe noire</p>
                         </div>
                         <div class="courses_card_price">
                             <span>35€</span>
@@ -83,6 +175,9 @@
                     </div>
                 </div>
             </div>
+            <!--
+            //──── 2nd menu chapter ────────────────────────────────────────────────────────
+            -->
             <div class="menu_chapter">
                 <div id="menu-item-5">
                     <h2 class="menu_chapter_title">PLATS</h2>
@@ -127,6 +222,9 @@
                     </div>
                 </div>
             </div>
+            <!--
+            //──── 3rd menu chapter ────────────────────────────────────────────────────────
+            -->
             <div class="menu_chapter">
                 <div id="menu-item-9">
                     <h2 class="menu_chapter_title">DESSERTS</h2>
@@ -172,10 +270,30 @@
                 </div>
             </div>
         </article>
+        <!--
+        //==============================================================================
+        /*                                                                            *
+         * launch-command button                                                      *
+         * No specific action performed for this mockup, neverthelesse cursor is      *
+         * pointer during hover, to show that it is clickable                         *
+         *                                                                            */
+        //==============================================================================
+        -->
         <div class="launch-command">
             <button class="gradient-button gradient-button--clickable" type="button">Commander</button>
-        </div>
+        </div> 
     </main>
+
+    <!--
+    //==============================================================================
+    /*                                                                            *
+     * footer (common to all pages): include 4 links                              *
+     * The 3 first are dummies and move to top page.                              *
+     * The 4th one is mailto, and open default mailer to write main to            *
+     * "contact@ohmyfood"                                                         *
+     *                                                                            */
+    //==============================================================================
+    -->
     <footer class="footer">
         <p class="footer_title">ohmyfood</p>
         <div class="footer_list">
@@ -185,5 +303,4 @@
             <a class="footer_list_item" href="mailto:contact@ohmyfood.com">Contact</a>
         </div>
     </footer>
-
 </body>
