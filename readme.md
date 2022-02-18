@@ -45,10 +45,14 @@ Responsiveness consider 4 breakpoints, separating 5 sizes of screen:
 
 - mobile (and below) : the given mockup is stricktly followed. 
 - small-tablet : addition of a max-width to stop the width growth of operation and 
-    restaurant list to avoid too much flattening of operation steps and restaurant cards.
-- tablet : max-width is removed, operations steps are displayed side by side with text on 2 lines, and restaurant cards are displayed in a 2 by 2 table.
-- laptop : same a tablet except that the restaurant cards are all displayed side by side one one row.    
-- desktop (and above) : same a laptop with reintroduction of max-width too flattened of operaton steps and restaurant cards.
+    restaurant list to avoid too much flattening of operation steps and restaurant cards.  
+	Footer remains left justified
+- tablet : max-width is removed, operations steps are displayed side by side with text on 2 lines, and restaurant cards are displayed in a 2 by 2 table.  
+Footer title is centered and links are displayed as 2 by table.
+- laptop : same a tablet except that the restaurant cards are all displayed side by side on one row.  
+Footer title centered, all linsk a displyed on one line.
+- desktop (and above) : same a laptop with reintroduction of max-width too flattened of operaton steps and restaurant cards.  
+Footer : not changed.
 
 This behavior is obtained by playing only on the width of the operation steps and restaurant cards with one flex box configuration.                
 for small-tablet and desktop, a max-width of small-tablet and desktop breakpoint is used to limit width of operation and restaurant list.
