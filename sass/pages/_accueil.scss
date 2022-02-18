@@ -298,10 +298,7 @@
       }
 }
 
-//──── use of scroll-disable on page body ──────────────────────────────────────
-.main-page {
-    animation: scroll-disable $loading-spinner-duration linear both;
-}
+
 
 //==============================================================================
 /*                                                                            *
@@ -358,4 +355,9 @@
         border-top: $loading-spinner-circle-thikness solid $color-tiertiary;
         animation: spin $loading-spinner-duration/3 linear 3 both;
     }
+}
+
+//──── use of scroll-disable on page body ──────────────────────────────────────
+.main-page {
+    animation: scroll-disable $loading-spinner-duration linear both;
 }

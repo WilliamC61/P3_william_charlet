@@ -681,11 +681,6 @@ button {
   }
 }
 
-.main-page {
-  -webkit-animation: scroll-disable 3s linear both;
-          animation: scroll-disable 3s linear both;
-}
-
 /*                                                                            *
  * loading spinner definition                                                 *
  * loading-spinner div is used to cover all the viewport and inhibate all     *
@@ -758,6 +753,11 @@ button {
   border-top: 5px solid #99E2D0;
   -webkit-animation: spin 1s linear 3 both;
           animation: spin 1s linear 3 both;
+}
+
+.main-page {
+  -webkit-animation: scroll-disable 3s linear both;
+          animation: scroll-disable 3s linear both;
 }
 
 .banner {
