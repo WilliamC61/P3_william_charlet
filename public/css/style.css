@@ -578,6 +578,7 @@ button {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
   -webkit-transition: opacity 500ms;
@@ -955,6 +956,7 @@ button {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
   -webkit-transition: opacity 500ms;
