@@ -47,6 +47,7 @@
         bottom: 0;
         background: $pink-gradient;
         background-clip: text;
+        -webkit-background-clip: text; // not added automatically by autoprefixer.
         color: transparent;
         opacity: 0;
         transition: opacity 500ms; 
