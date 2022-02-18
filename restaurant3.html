@@ -1,31 +1,3 @@
-<!--
-//==============================================================================
-/*                                                                            *
- *                             Restaurant3 page                               *
- *                                                                            *
- * Structure is common for the 4 restaurants, only texts are changed except   *
- * for restaurant2 "La note enchantée" for whih a 4th starter is added.       *
- * Responsiveness consider 4 breakpoints for mobile (and below), smal-tablet, *
- * tablet, laptop and desktop                                                 *
- *  - Mobile follows stricly the given mockup                                 *
- *  - small-tablet : banner height is slightly increased, restaurant name is  *
- *    centered and addition of a max-width to stop the growth of menu width   *
- *    to avoid too much flattening of course cards                            *
- *  - Tablet : the banner height is slightly increased, restaurant name is    *
- *    kept centered, max-width is removed as starter and main chapters are    *
- *    displayed side by side, dessert chapter is centered below.              *
- *  - Laptop : same a tablet except that the 3 chapters are displayed side by *
- *    side.                                                                   *
- *  - Destop : same a laptop with reintroduction of max-width too flattened   *
- *    courses cards                                                           *
- * For the menu, this behavior is obtained by playing only on the width of    *
- * menu chapters with one flex box configuration. a max-width of              *
- * small-tablet anddesktop breakpoint is used to limmit menu width growth.    *
- * For restaurant name, justify-content is changed from space-around to space *
- * between for mobile only.                                                   */              
-//==============================================================================
---> 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,23 +19,7 @@
     <title>À la française</title>
 </head>
 
-<!--
-//==============================================================================
-/*                                                                            *
- * body, include:                                                             *
- * - header                                                                   *
- * - banner                                                                   *
- * - introduction                                                             *
- * - main : includes:                                                         *
- *   o restaurant-info                                                        *
- *   o menu                                                                   *
- *   o launch-command button                                                  *
- * - footer                                                                   *
- *                                                                            */
-//==============================================================================
--->
 <body class="restaurant-page">
-
     <!-- 
     //──── header : website logo and link to main page ─────────────────────────
     -->
@@ -99,13 +55,7 @@
         </div>
 
         <!--
-        //==============================================================================
-        /*                                                                            *
-         * menu is divided in menu chapters listing course cards                      *
-         * It is a flew box w/ wrap                                                   *
-         * Each menu item, chapter or course card, has an id for animation            *
-         *                                                                            */
-        //==============================================================================
+        //──── menu : 3 menu chapters ──────────────────────────────────────────────────
         -->
         <article class="menu">
             <!--
@@ -124,18 +74,7 @@
                 -->
                 <div class="courses">
                     <!--
-                    //==============================================================================
-                    /*                                                                            *
-                     * course card includes 3 parts in a row:                                     *
-                     * - course description with title and subtitle                               *
-                     * - price                                                                    *
-                     * - check-mark                                                               *
-                     * it a row flex box w/o wrap and w/o shrink                                  *
-                     * At initial stage, no space to display check-box. During annimation         *
-                     * description width is reduced to allow appearence of check-box.             *
-                     * Elipsis is used to avoid text wrap and ... appearance.                     *
-                     *                                                                            */
-                    //==============================================================================
+                    //──── course card : course description, price and checkmark ───────────────────
                     -->
                     <div id="menu-item-2" class="courses_card">
                         <div class="courses_card_desc">
@@ -271,13 +210,7 @@
             </div>
         </article>
         <!--
-        //==============================================================================
-        /*                                                                            *
-         * launch-command button                                                      *
-         * No specific action performed for this mockup, neverthelesse cursor is      *
-         * pointer during hover, to show that it is clickable                         *
-         *                                                                            */
-        //==============================================================================
+        //──── launch-command button ───────────────────────────────────────────────────
         -->
         <div class="launch-command">
             <button class="gradient-button gradient-button--clickable" type="button">Commander</button>
@@ -285,14 +218,7 @@
     </main>
 
     <!--
-    //==============================================================================
-    /*                                                                            *
-     * footer (common to all pages): include 4 links                              *
-     * The 3 first are dummies and move to top page.                              *
-     * The 4th one is mailto, and open default mailer to write main to            *
-     * "contact@ohmyfood"                                                         *
-     *                                                                            */
-    //==============================================================================
+    //──── footer ────────────────────────────────────────────────────────────────── 
     -->
     <footer class="footer">
         <p class="footer_title">ohmyfood</p>

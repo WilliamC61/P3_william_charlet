@@ -158,22 +158,59 @@ button {
 .footer {
   background-color: #000;
   color: #FFFFFF;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
 }
 
 .footer_title {
-  margin-left: 2.4rem;
   padding-top: 2rem;
   padding-bottom: 1rem;
   font-family: Shrikhand;
   font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 575px) {
+  .footer_title {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .footer_title {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .footer_list {
   padding-bottom: 3.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer_list_item {
-  margin-left: 2.4rem;
   font-size: 1.6rem;
   color: #FFFFFF;
   text-decoration: none;
@@ -181,7 +218,40 @@ button {
   display: block;
 }
 
-.footer_list_item_icon {
+@media screen and (max-width: 575px) {
+  .footer_list_item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .footer_list_item {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .footer_list_item {
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  .footer_list_item {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer_list_item {
+    width: 25%;
+  }
+}
+
+.footer_list_icon {
   font-size: 1.3rem;
   width: 2.2rem;
   text-align: center;
@@ -681,11 +751,6 @@ button {
   }
 }
 
-.main-page {
-  -webkit-animation: scroll-disable 3s linear both;
-          animation: scroll-disable 3s linear both;
-}
-
 /*                                                                            *
  * loading spinner definition                                                 *
  * loading-spinner div is used to cover all the viewport and inhibate all     *
@@ -758,6 +823,11 @@ button {
   border-top: 5px solid #99E2D0;
   -webkit-animation: spin 1s linear 3 both;
           animation: spin 1s linear 3 both;
+}
+
+.main-page {
+  -webkit-animation: scroll-disable 3s linear both;
+          animation: scroll-disable 3s linear both;
 }
 
 .banner {
@@ -1568,12 +1638,12 @@ button {
 }
 
 .courses_card:hover .courses_card_desc {
-  -webkit-animation: desc-shrink 0.3s linear 0s 1  both;
-          animation: desc-shrink 0.3s linear 0s 1  both;
+  -webkit-animation: desc-shrink 400ms linear 0s 1 forwards;
+          animation: desc-shrink 400ms linear 0s 1 forwards;
 }
 
 .courses_card:hover .courses_card_check-mark_icone {
-  -webkit-animation: icon-rotate 0.3s linear 0s 1  both;
-          animation: icon-rotate 0.3s linear 0s 1  both;
+  -webkit-animation: icon-rotate 400ms linear 0s 1 forwards;
+          animation: icon-rotate 400ms linear 0s 1 forwards;
 }
 /*# sourceMappingURL=style.css.map */
