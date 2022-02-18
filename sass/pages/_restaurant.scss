@@ -223,9 +223,9 @@
     }
 }
 .courses_card:hover .courses_card_desc {
-    animation: desc-shrink 0.3s linear 0s 1  both;
+    animation: desc-shrink $checkmark-anim-duration linear 0s 1  forwards;
 }
 
 .courses_card:hover .courses_card_check-mark_icone {
-    animation: icon-rotate 0.3s linear 0s 1  both;
+    animation: icon-rotate $checkmark-anim-duration linear 0s 1  forwards;
 }
