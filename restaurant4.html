@@ -1,0 +1,306 @@
+<!--
+//==============================================================================
+/*                                                                            *
+ *                             Restaurant3 page                               *
+ *                                                                            *
+ * Structure is common for the 4 restaurants, only texts are changed except   *
+ * for restaurant2 "La note enchantée" for whih a 4th starter is added.       *
+ * Responsiveness consider 4 breakpoints for mobile (and below), smal-tablet, *
+ * tablet, laptop and desktop                                                 *
+ *  - Mobile follows stricly the given mockup                                 *
+ *  - small-tablet : banner height is slightly increased, restaurant name is  *
+ *    centered and addition of a max-width to stop the growth of menu width   *
+ *    to avoid too much flattening of course cards                            *
+ *  - Tablet : the banner height is slightly increased, restaurant name is    *
+ *    kept centered, max-width is removed as starter and main chapters are    *
+ *    displayed side by side, dessert chapter is centered below.              *
+ *  - Laptop : same a tablet except that the 3 chapters are displayed side by *
+ *    side.                                                                   *
+ *  - Destop : same a laptop with reintroduction of max-width too flattened   *
+ *    courses cards                                                           *
+ * For the menu, this behavior is obtained by playing only on the width of    *
+ * menu chapters with one flex box configuration. a max-width of              *
+ * small-tablet anddesktop breakpoint is used to limmit menu width growth.    *
+ * For restaurant name, justify-content is changed from space-around to space *
+ * between for mobile only.                                                   */              
+//==============================================================================
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- to use device logical viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for MS edge compatibility-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- style sheet path -->
+    <link rel="stylesheet" href="./public/css/style.css">
+    <!-- use of google fonts via CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- use of font awesome via bootstrap CDN -->
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+    <!-- page title -->
+    <title>Le délice des sens</title>
+</head>
+
+<!--
+//==============================================================================
+/*                                                                            *
+ * body, include:                                                             *
+ * - header                                                                   *
+ * - banner                                                                   *
+ * - introduction                                                             *
+ * - main : includes:                                                         *
+ *   o restaurant-info                                                        *
+ *   o menu                                                                   *
+ *   o launch-command button                                                  *
+ * - footer                                                                   *
+ *                                                                            */
+//==============================================================================
+-->
+<body class="restaurant-page">
+
+    <!-- 
+    //──── header : website logo and link to main page ─────────────────────────
+    -->
+    <header class="header">
+            <img class="header_logo" src="public/img/logo/ohmyfood.svg" alt="Logo"/>
+            <a class="header_back-to-main" href="index.html"><i class="fas fa-arrow-left"></i></a> 
+    </header>
+
+    <!--
+    //──── banner : restaurant image ───────────────────────────────────────────   
+    -->
+    <div class="banner">
+        <img class="banner_img" src="./public/img/restaurants/restaurant_1.jpg" alt="La palette du gout"/>
+    </div>
+
+    <!--
+    //──── main : restaurant-info, menu, launch command button ─────────────────
+    -->
+    <main class="main-restaurant">
+
+        <!--
+        //──── restaurant-info : restaurant name and is-favorite icon ──────────  
+        -->
+       <div class="restaurant-info">
+            <h1 class="restaurant-info_name">Le délice des sens</h1>
+            <form class="restaurant-info_is-favorite">
+                <input class="hidden-checkbox" type="checkbox" id="heart"/>
+                <label for="heart">
+                    <i class="restaurant-info_is-favorite--no far fa-heart"></i>
+                    <i class="restaurant-info_is-favorite--yes fas fa-heart"></i>
+                </label>
+            </form>
+        </div>
+
+        <!--
+        //==============================================================================
+        /*                                                                            *
+         * menu is divided in menu chapters listing course cards                      *
+         * It is a flew box w/ wrap                                                   *
+         * Each menu item, chapter or course card, has an id for animation            *
+         *                                                                            */
+        //==============================================================================
+        -->
+        <article class="menu">
+            <!--
+            //──── menu_chapter : header and courses cards list ────────────────────────────    
+            -->
+            <div class="menu_chapter">
+                <!--
+                //──── header : title= course type (starter, main, dessert) ────────────────────    
+                -->
+                <div id="menu-item-1" class="menu_chapter_header">
+                    <h2 class="menu_chapter_title">ENTRÉES</h2>
+                    <div class="menu_chapter_underline"></div>
+                </div>
+                <!--
+                //──── courses : list of courses card ──────────────────────────────────────────
+                -->
+                <div class="courses">
+                    <!--
+                    //==============================================================================
+                    /*                                                                            *
+                     * course card includes 3 parts in a row:                                     *
+                     * - course description with title and subtitle                               *
+                     * - price                                                                    *
+                     * - check-mark                                                               *
+                     * it a row flex box w/o wrap and w/o shrink                                  *
+                     * At initial stage, no space to display check-box. During annimation         *
+                     * description width is reduced to allow appearence of check-box.             *
+                     * Elipsis is used to avoid text wrap and ... appearance.                     *
+                     *                                                                            */
+                    //==============================================================================
+                    -->
+                    <div id="menu-item-2" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Tartare de thon</h3>
+                            <p class="courses_card_desc_subtitle">Assaisonné au yuzu</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>25€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-3" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Bouchée de homard croustillant</h3>
+                            <p class="courses_card_desc_subtitle">Et sa farandole de petits légumes</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>35€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-4" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Velouté de cèpes</h3>
+                            <p class="courses_card_desc_subtitle">Aux truffes</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>20€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            //──── 2nd menu chapter ────────────────────────────────────────────────────────
+            -->
+            <div class="menu_chapter">
+                <div id="menu-item-5">
+                    <h2 class="menu_chapter_title">PLATS</h2>
+                    <div class="menu_chapter_underline"></div>
+                </div>
+                <div class="courses">
+                    <div id="menu-item-6" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Poulet rôti aux herbes de Provence</h3>
+                            <p class="courses_card_desc_subtitle">Et sa crème de truffe</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>40€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-7" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Langouste rôtie</h3>
+                            <p class="courses_card_desc_subtitle">Et ses légumes de saison</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>35€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-8" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Côte de boeuf Angus</h3>
+                            <p class="courses_card_desc_subtitle">Et sa purée de panais</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>44€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            //──── 3rd menu chapter ────────────────────────────────────────────────────────
+            -->
+            <div class="menu_chapter">
+                <div id="menu-item-9">
+                    <h2 class="menu_chapter_title">DESSERTS</h2>
+                    <div class="menu_chapter_underline"></div>
+                </div>
+                <div class="courses">
+                    <div id="menu-item-10" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Farandole de desserts</h3>
+                            <p class="courses_card_desc_subtitle">Du chef</p>
+                        </div>
+                        <div class="courses_card_price">
+                            <span>18€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-11" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Crème brulée</h3>
+                            <p class="courses_card_desc_subtitle">Revisité</p>
+                        </div>
+                            <div class="courses_card_price">
+                            <span>22€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div id="menu-item-12" class="courses_card">
+                        <div class="courses_card_desc">
+                            <h3 class="courses_card_desc_title">Tiramisu</h3>
+                            <p class="courses_card_desc_subtitle">À la noisette</p>
+                        </div>
+                            <div class="courses_card_price">
+                            <span>23€</span>
+                        </div>
+                        <div class="courses_card_check-mark">
+                            <span class="courses_card_check-mark_icone"><i class="courses_card_check-mark_icone fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--
+        //==============================================================================
+        /*                                                                            *
+         * launch-command button                                                      *
+         * No specific action performed for this mockup, neverthelesse cursor is      *
+         * pointer during hover, to show that it is clickable                         *
+         *                                                                            */
+        //==============================================================================
+        -->
+        <div class="launch-command">
+            <button class="gradient-button gradient-button--clickable" type="button">Commander</button>
+        </div> 
+    </main>
+
+    <!--
+    //==============================================================================
+    /*                                                                            *
+     * footer (common to all pages): include 4 links                              *
+     * The 3 first are dummies and move to top page.                              *
+     * The 4th one is mailto, and open default mailer to write main to            *
+     * "contact@ohmyfood"                                                         *
+     *                                                                            */
+    //==============================================================================
+    -->
+    <footer class="footer">
+        <p class="footer_title">ohmyfood</p>
+        <div class="footer_list">
+            <a class="footer_list_item" href=#><i class="footer_list_item_icon fas fa-utensils"></i>Proposer un restaurant</a>
+            <a class="footer_list_item" href=#><i class="footer_list_item_icon fas fa-hands-helping"></i>Devenir partenaire</a>
+            <a class="footer_list_item" href="#">Mentions légales</a>
+            <a class="footer_list_item" href="mailto:contact@ohmyfood.com">Contact</a>
+        </div>
+    </footer>
+</body>

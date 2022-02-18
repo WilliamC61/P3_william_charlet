@@ -220,14 +220,20 @@
     }
 }
 
-@keyframes spin {
-    0% { 
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-}
+
+//==============================================================================
+/*                                                                            *
+ * Animations used for loading spinner                                        *
+ *                                                                            */
+//==============================================================================
+
+//==============================================================================
+/*                                                                            *
+ * spin-and-scale is used only for the loading-spinner-circle div.            *
+ * it allows scaling of the div itself and the pseudo-elements :before and    *
+ * :after.                                                                    *
+ *                                                                            */
+//==============================================================================
 @keyframes spin-and-scale {
     0% { 
       transform: rotate(0deg) scale(1);
@@ -238,6 +244,28 @@
     }
 }
 
+//==============================================================================
+/*                                                                            *
+ * spin is used only for the the pseudo-elements :before and :after.          *
+ * It allows quicker rotation of inner circle coming in addition of div       *
+ * rotation itself.                                                           *
+ *                                                                            */
+//==============================================================================
+@keyframes spin {
+    0% { 
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+//==============================================================================
+/*                                                                            *
+ * scroll-disable : used to disable main page scrolling by hiding overflow    *
+ * during loading spinner animation                                           *
+ *                                                                            */
+//==============================================================================
 @keyframes scroll-disable {
     0%{
         overflow:hidden;
@@ -250,6 +278,13 @@
     }
 }
 
+//==============================================================================
+/*                                                                            *
+ * loading-spinner-opacity : used to decrease opacity of the spinner and make *
+ * it fully vanishing at the end of the annimation (visibility: hidden) to    *
+ * enable back intercation with page behind.                                  *
+ *                                                                            */
+//==============================================================================
 @keyframes loading-spinner-opacity {
     0% { 
         opacity:0.9;
@@ -261,11 +296,24 @@
         opacity:0;
         visibility: hidden;
       }
-} 
-
-.main-page {
-    animation: scroll-disable 3s linear both;
 }
+
+//──── use of scroll-disable on page body ──────────────────────────────────────
+.main-page {
+    animation: scroll-disable $loading-spinner-duration linear both;
+}
+
+//==============================================================================
+/*                                                                            *
+ * loading spinner definition                                                 *
+ * loading-spinner div is used to cover all the viewport and inhibate all     *
+ * actions.                                                                   *
+ * circle child div is used to build 3 rotating 45° circle segments which are *
+ *  the borders of this square div and its :before and :after pseudo          *
+  * -elements.                                                                *
+ * the inner circle rotate quicker than middle one, and outer less than       *
+ * middle                                                                     */
+//==============================================================================
 
 .loading-spinner {
     width: 100%;
@@ -278,36 +326,36 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    animation: loading-spinner-opacity 3s linear both;
+    animation: loading-spinner-opacity $loading-spinner-duration linear both;
     &_circle {
-        width: 250px;
-        height: 250px;
+        width: $loading-spinner-size;
+        height: $loading-spinner-size;
         vertical-align: middle;
         display: inline-block;
         position: relative;
-        border-radius:250px;
-        border: 5px solid transparent;
+        border-radius: $loading-spinner-size / 2;
+        border: $loading-spinner-circle-thikness solid transparent;
         border-top-color: $color-primary;
-        animation: spin-and-scale 3s linear 1 both;
+        animation: spin-and-scale $loading-spinner-duration linear 1 both;
     }
     &_circle:after {
         content: "";
         position: absolute;
-        top: 10px; left: 10px;
-        bottom:10px; right: 10px;
-        border-radius: 240px;
-        border: 5px solid transparent;
-        border-top: 5px solid $color-secondary;
-        animation: spin 1.5s linear 2 both;
+        top: $loading-spinner-circle-thikness * 2; left: $loading-spinner-circle-thikness * 2;
+        bottom:$loading-spinner-circle-thikness * 2; right: $loading-spinner-circle-thikness * 2;
+        border-radius: ($loading-spinner-size - $loading-spinner-circle-thikness * 4) / 2;
+        border: $loading-spinner-circle-thikness solid transparent;
+        border-top: $loading-spinner-circle-thikness solid $color-secondary;
+        animation: spin $loading-spinner-duration/2 linear 2 both;
     }
     &_circle:before {
         content: "";
         position: absolute;
-        top: 25px; left: 25px;
-        bottom: 25px; right: 25px;
-        border-radius: 225px;
-        border: 5px solid transparent;
-        border-top: 5px solid $color-tiertiary;
-        animation: spin 1s linear 3 both;
+        top: $loading-spinner-circle-thikness * 5; left: $loading-spinner-circle-thikness * 5;
+        bottom: $loading-spinner-circle-thikness * 5; right: $loading-spinner-circle-thikness * 5;
+        border-radius: ($loading-spinner-size - $loading-spinner-circle-thikness * 10) / 2;
+        border: $loading-spinner-circle-thikness solid transparent;
+        border-top: $loading-spinner-circle-thikness solid $color-tiertiary;
+        animation: spin $loading-spinner-duration/3 linear 3 both;
     }
 }

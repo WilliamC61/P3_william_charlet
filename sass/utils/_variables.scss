@@ -1,3 +1,5 @@
+
+//──── colors definition ───────────────────────────────────────────────────────
 $color-primary: #9356DC;
 $color-primary-light: #F5EDFF;
 $color-secondary: #FF79DA ;
@@ -7,12 +9,16 @@ $color-black: #000;
 $color-mid-grey: #7E7E7E;
 $color-light-grey: #EAEAEA;
 $color-very-light-grey: #F6F6F6;
-
+//──── gradient definition ─────────────────────────────────────────────────────
 $pink-gradient: linear-gradient( $color-secondary, $color-primary); 
-$loading-spiner-duration: 3s;
 
-
+//──── breapoints definition ───────────────────────────────────────────────────
 $mobile-breakpoint: 576px;
 $tablet-breakpoint: 768px;
 $laptop-breakpoint: 992px;
 $desktop-breakpoint: 1400px;
+
+//──── spinner animations ─────────────────────────────────────────────────────
+$loading-spinner-size: 250px;
+$loading-spinner-circle-thikness: 5px;
+$loading-spinner-duration: 3s;

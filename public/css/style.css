@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 @import "./utils/functions";*/
 /*              REsponsive categories vs breakpoints                            *
@@ -568,28 +569,14 @@ button {
   opacity: 0;
 }
 
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
+/*                                                                            *
+ * Animations used for loading spinner                                        *
+ *                                                                            */
+/*                                                                            *
+ * spin-and-scale is used only for the loading-spinner-circle div.            *
+ * it allows scaling of the div itself and the pseudo-elements :before and    *
+ * :after.                                                                    *
+ *                                                                            */
 @-webkit-keyframes spin-and-scale {
   0% {
     -webkit-transform: rotate(0deg) scale(1);
@@ -600,7 +587,6 @@ button {
             transform: rotate(360deg) scale(0.1);
   }
 }
-
 @keyframes spin-and-scale {
   0% {
     -webkit-transform: rotate(0deg) scale(1);
@@ -612,6 +598,36 @@ button {
   }
 }
 
+/*                                                                            *
+ * spin is used only for the the pseudo-elements :before and :after.          *
+ * It allows quicker rotation of inner circle coming in addition of div       *
+ * rotation itself.                                                           *
+ *                                                                            */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*                                                                            *
+ * scroll-disable : used to disable main page scrolling by hiding overflow    *
+ * during loading spinner animation                                           *
+ *                                                                            */
 @-webkit-keyframes scroll-disable {
   0% {
     overflow: hidden;
@@ -623,7 +639,6 @@ button {
     overflow: visible;
   }
 }
-
 @keyframes scroll-disable {
   0% {
     overflow: hidden;
@@ -636,6 +651,11 @@ button {
   }
 }
 
+/*                                                                            *
+ * loading-spinner-opacity : used to decrease opacity of the spinner and make *
+ * it fully vanishing at the end of the annimation (visibility: hidden) to    *
+ * enable back intercation with page behind.                                  *
+ *                                                                            */
 @-webkit-keyframes loading-spinner-opacity {
   0% {
     opacity: 0.9;
@@ -648,7 +668,6 @@ button {
     visibility: hidden;
   }
 }
-
 @keyframes loading-spinner-opacity {
   0% {
     opacity: 0.9;
@@ -667,6 +686,15 @@ button {
           animation: scroll-disable 3s linear both;
 }
 
+/*                                                                            *
+ * loading spinner definition                                                 *
+ * loading-spinner div is used to cover all the viewport and inhibate all     *
+ * actions.                                                                   *
+ * circle child div is used to build 3 rotating 45° circle segments which are *
+ *  the borders of this square div and its :before and :after pseudo          *
+  * -elements.                                                                *
+ * the inner circle rotate quicker than middle one, and outer less than       *
+ * middle                                                                     */
 .loading-spinner {
   width: 100%;
   height: 100vh;
@@ -697,7 +725,7 @@ button {
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  border-radius: 250px;
+  border-radius: 125px;
   border: 5px solid transparent;
   border-top-color: #9356DC;
   -webkit-animation: spin-and-scale 3s linear 1 both;
@@ -711,7 +739,7 @@ button {
   left: 10px;
   bottom: 10px;
   right: 10px;
-  border-radius: 240px;
+  border-radius: 115px;
   border: 5px solid transparent;
   border-top: 5px solid #FF79DA;
   -webkit-animation: spin 1.5s linear 2 both;
@@ -725,7 +753,7 @@ button {
   left: 25px;
   bottom: 25px;
   right: 25px;
-  border-radius: 225px;
+  border-radius: 100px;
   border: 5px solid transparent;
   border-top: 5px solid #99E2D0;
   -webkit-animation: spin 1s linear 3 both;
@@ -1018,6 +1046,7 @@ button {
   text-align: center;
 }
 
+/* 13 menu items for restaurant2 is the maximaum */
 @-webkit-keyframes menu_anim1 {
   0% {
     opacity: 0.0;
@@ -1033,7 +1062,6 @@ button {
     opacity: 1;
   }
 }
-
 @keyframes menu_anim1 {
   0% {
     opacity: 0.0;
@@ -1402,6 +1430,38 @@ button {
   }
 }
 
+@-webkit-keyframes menu_anim13 {
+  0% {
+    opacity: 0.0;
+    -webkit-transform: translateY(26rem);
+            transform: translateY(26rem);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes menu_anim13 {
+  0% {
+    opacity: 0.0;
+    -webkit-transform: translateY(26rem);
+            transform: translateY(26rem);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #menu-item-1 {
   -webkit-animation: menu_anim1 500ms linear 250ms 1 both;
           animation: menu_anim1 500ms linear 250ms 1 both;
@@ -1460,6 +1520,11 @@ button {
 #menu-item-12 {
   -webkit-animation: menu_anim12 500ms linear 3000ms 1 both;
           animation: menu_anim12 500ms linear 3000ms 1 both;
+}
+
+#menu-item-13 {
+  -webkit-animation: menu_anim13 500ms linear 3250ms 1 both;
+          animation: menu_anim13 500ms linear 3250ms 1 both;
 }
 
 @-webkit-keyframes desc-shrink {
