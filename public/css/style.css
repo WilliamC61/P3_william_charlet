@@ -1640,12 +1640,12 @@ button {
 }
 
 .courses_card:hover .courses_card_desc {
-  -webkit-animation: desc-shrink 400ms linear 0s 1 forwards;
-          animation: desc-shrink 400ms linear 0s 1 forwards;
+  -webkit-animation: desc-shrink 400ms linear 0s 1 both;
+          animation: desc-shrink 400ms linear 0s 1 both;
 }
 
 .courses_card:hover .courses_card_check-mark_icone {
-  -webkit-animation: icon-rotate 400ms linear 0s 1 forwards;
-          animation: icon-rotate 400ms linear 0s 1 forwards;
+  -webkit-animation: icon-rotate 400ms linear 0s 1 both;
+          animation: icon-rotate 400ms linear 0s 1 both;
 }
 /*# sourceMappingURL=style.css.map */
